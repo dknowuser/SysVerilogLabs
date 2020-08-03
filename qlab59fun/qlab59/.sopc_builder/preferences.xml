@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <systemtable filter="onchip_memory2_0">
+  <columns>
+   <connections preferredWidth="63" />
+   <export visible="0" />
+   <irq preferredWidth="34" />
+   <tags preferredWidth="247" />
+   <name preferredWidth="201" />
+  </columns>
+ </systemtable>
+ <clocktable>
+  <columns>
+   <clockname preferredWidth="152" />
+   <clocksource preferredWidth="152" />
+   <frequency preferredWidth="150" />
+  </columns>
+ </clocktable>
+ <window width="960" height="1040" x="0" y="0" />
+ <library
+   expandedCategories="Library/Processors,Library/Peripherals/Microcontroller Peripherals,Library/Peripherals,Library,Library/Memories and Memory Controllers,Project,Library/Memories and Memory Controllers/On-Chip" />
+</preferences>

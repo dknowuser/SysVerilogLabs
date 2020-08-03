@@ -1,0 +1,56 @@
+# system info qlab5 on 2020.02.29.18:48:43
+system_info:
+name,value
+DEVICE,EP2C5Q208C8
+DEVICE_FAMILY,Cyclone II
+GENERATION_ID,1582991307
+#
+#
+# Files generated for qlab5 on 2020.02.29.18:48:43
+files:
+filepath,kind,attributes,module,is_top
+qlab5/simulation/qlab5.v,VERILOG,,qlab5,true
+qlab5/simulation/submodules/qlab5_nios2_qsys_0.do,OTHER,,qlab5_nios2_qsys_0,false
+qlab5/simulation/submodules/qlab5_nios2_qsys_0.v,VERILOG,,qlab5_nios2_qsys_0,false
+qlab5/simulation/submodules/qlab5_nios2_qsys_0_rf_ram_a.dat,DAT,,qlab5_nios2_qsys_0,false
+qlab5/simulation/submodules/qlab5_nios2_qsys_0_rf_ram_a.hex,HEX,,qlab5_nios2_qsys_0,false
+qlab5/simulation/submodules/qlab5_nios2_qsys_0_rf_ram_a.mif,MIF,,qlab5_nios2_qsys_0,false
+qlab5/simulation/submodules/qlab5_nios2_qsys_0_rf_ram_b.dat,DAT,,qlab5_nios2_qsys_0,false
+qlab5/simulation/submodules/qlab5_nios2_qsys_0_rf_ram_b.hex,HEX,,qlab5_nios2_qsys_0,false
+qlab5/simulation/submodules/qlab5_nios2_qsys_0_rf_ram_b.mif,MIF,,qlab5_nios2_qsys_0,false
+qlab5/simulation/submodules/qlab5_nios2_qsys_0_test_bench.v,VERILOG,,qlab5_nios2_qsys_0,false
+qlab5/simulation/submodules/qlab5_onchip_memory2_0.hex,HEX,,qlab5_onchip_memory2_0,false
+qlab5/simulation/submodules/qlab5_onchip_memory2_0.v,VERILOG,,qlab5_onchip_memory2_0,false
+qlab5/simulation/submodules/qlab5_pio_0.v,VERILOG,,qlab5_pio_0,false
+qlab5/simulation/submodules/altera_merlin_master_translator.sv,SYSTEM_VERILOG,,altera_merlin_master_translator,false
+qlab5/simulation/submodules/altera_merlin_slave_translator.sv,SYSTEM_VERILOG,,altera_merlin_slave_translator,false
+qlab5/simulation/submodules/altera_merlin_master_agent.sv,SYSTEM_VERILOG,,altera_merlin_master_agent,false
+qlab5/simulation/submodules/altera_merlin_slave_agent.sv,SYSTEM_VERILOG,,altera_merlin_slave_agent,false
+qlab5/simulation/submodules/altera_merlin_burst_uncompressor.sv,SYSTEM_VERILOG,,altera_merlin_slave_agent,false
+qlab5/simulation/submodules/altera_avalon_sc_fifo.v,VERILOG,,altera_avalon_sc_fifo,false
+qlab5/simulation/submodules/qlab5_addr_router.sv,SYSTEM_VERILOG,,qlab5_addr_router,false
+qlab5/simulation/submodules/qlab5_id_router.sv,SYSTEM_VERILOG,,qlab5_id_router,false
+qlab5/simulation/submodules/altera_reset_controller.v,VERILOG,,altera_reset_controller,false
+qlab5/simulation/submodules/altera_reset_synchronizer.v,VERILOG,,altera_reset_controller,false
+qlab5/simulation/submodules/qlab5_cmd_xbar_demux.sv,SYSTEM_VERILOG,,qlab5_cmd_xbar_demux,false
+qlab5/simulation/submodules/qlab5_irq_mapper.sv,SYSTEM_VERILOG,,qlab5_irq_mapper,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+qlab5.nios2_qsys_0,qlab5_nios2_qsys_0
+qlab5.onchip_memory2_0,qlab5_onchip_memory2_0
+qlab5.pio_0,qlab5_pio_0
+qlab5.nios2_qsys_0_instruction_master_translator,altera_merlin_master_translator
+qlab5.nios2_qsys_0_data_master_translator,altera_merlin_master_translator
+qlab5.onchip_memory2_0_s1_translator,altera_merlin_slave_translator
+qlab5.pio_0_s1_translator,altera_merlin_slave_translator
+qlab5.nios2_qsys_0_instruction_master_translator_avalon_universal_master_0_agent,altera_merlin_master_agent
+qlab5.onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent,altera_merlin_slave_agent
+qlab5.onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo,altera_avalon_sc_fifo
+qlab5.addr_router,qlab5_addr_router
+qlab5.id_router,qlab5_id_router
+qlab5.rst_controller,altera_reset_controller
+qlab5.cmd_xbar_demux,qlab5_cmd_xbar_demux
+qlab5.rsp_xbar_demux,qlab5_cmd_xbar_demux
+qlab5.irq_mapper,qlab5_irq_mapper

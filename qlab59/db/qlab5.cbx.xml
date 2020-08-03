@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="qlab5">
+		<CBX_INST_ENTRY INSTANCE_NAME="|qlab5|qlab5_sys:qlab5_cpu|cpu_0:the_cpu_0|cpu_0_rf_module:cpu_0_rf|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_1l22.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|qlab5|qlab5_sys:qlab5_cpu|onchip_memory2_0:the_onchip_memory2_0|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_u3c1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

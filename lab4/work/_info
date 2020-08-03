@@ -1,0 +1,257 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:/study/Labs/Verify/lab4
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+!s110 1589916909
+VKmWUHQ:gJhcz>WgJRP[>a3
+04 3 4 work top fast 0
+=1-0090f5d3e5f7-5ec434ed-243-2f28
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt
+Z2 OL;O;10.2c;57
+T_opt1
+Vb@W_hEih5M4^WlNdPSdUW1
+04 6 4 work device fast 0
+=1-0090f5d3e5f7-5ec3e8ad-13b-3504
+R1
+n@_opt1
+R2
+Z3 dE:/study/Labs/Verify/lab4
+!s110 1589897389
+Ybus
+Z4 DXx6 sv_std 3 std 0 22 `a<MJET1=lN@jzbA7kHm;1
+Z5 !s110 1589916901
+IT1K3ml;5QYcG<L0l7cO8M0
+Z6 V`JN@9S9cnhjKRR_L]QIcM3
+Z7 !s105 interface_sv_unit
+S1
+R3
+Z8 w1589897305
+Z9 8E:/study/Labs/Verify/lab4/interface.sv
+Z10 FE:/study/Labs/Verify/lab4/interface.sv
+L0 1
+Z11 OL;L;10.2c;57
+r1
+31
+Z12 !s108 1589916901.647000
+Z13 !s107 E:/study/Labs/Verify/lab4/interface.sv|
+Z14 !s90 -reportprogress|300|-work|work|-vopt|-sv|E:/study/Labs/Verify/lab4/interface.sv|
+Z15 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s100 E?7Sz:44lS78K6[HHk7QY0
+!i10b 1
+!s85 0
+!i111 0
+4clocks
+R4
+R5
+Iz?fZBSoFeBG^LNeelBNlE0
+R6
+R7
+S1
+R3
+R8
+R9
+R10
+L0 21
+R11
+r1
+31
+R12
+R13
+R14
+R15
+!s100 kBm6@Y7k2KFZTenEOHJo50
+!i10b 1
+!s85 0
+!i111 0
+vdevice
+R4
+DXx4 work 14 device_sv_unit 0 22 Klc>mL^E7P;:;GI1g2Loa0
+R6
+r1
+31
+I]U4gfDV2W8;B?Fhom2^SA0
+S1
+R3
+Z16 w1589916892
+Z17 8E:/study/Labs/Verify/lab4/device.sv
+Z18 FE:/study/Labs/Verify/lab4/device.sv
+L0 3
+R11
+Z19 !s108 1589916901.786000
+Z20 !s107 myclass.sv|E:/study/Labs/Verify/lab4/device.sv|
+Z21 !s90 -reportprogress|300|-work|work|-vopt|-sv|E:/study/Labs/Verify/lab4/device.sv|
+R15
+!s105 device_sv_unit
+!s100 QO@kOU>N^ZF2ozic^9z0W0
+!s85 0
+!i10b 1
+!i111 0
+Xdevice_sv_unit
+R4
+VKlc>mL^E7P;:;GI1g2Loa0
+r1
+31
+IKlc>mL^E7P;:;GI1g2Loa0
+S1
+R3
+R16
+R17
+R18
+Z22 Fmyclass.sv
+L1 1
+R11
+R19
+R20
+R21
+R15
+!s100 Z;:Q>KgU=2C59O[S0RiND1
+!s85 0
+!i10b 1
+!i103 1
+!i111 0
+vgenerator
+R4
+Z23 DXx4 work 17 test_fifo_sv_unit 0 22 2ajb:FaMAmzFi8ULWmMA:1
+R6
+r1
+31
+IGoNgl<aEQdGOWoG7<Z[]A1
+Z24 !s105 test_fifo_sv_unit
+S1
+R3
+Z25 w1589916134
+Z26 8E:/study/Labs/Verify/lab4/test_fifo.sv
+Z27 FE:/study/Labs/Verify/lab4/test_fifo.sv
+L0 3
+R11
+Z28 !s108 1589916901.908000
+Z29 !s107 myclass.sv|E:/study/Labs/Verify/lab4/test_fifo.sv|
+Z30 !s90 -reportprogress|300|-work|work|-vopt|-sv|E:/study/Labs/Verify/lab4/test_fifo.sv|
+R15
+!s100 iXo]1C`@E@53l7A2GzZT33
+!s85 0
+!i10b 1
+!i111 0
+Xinterface_sv_unit
+R4
+I5XTmz71aVbeOARa@mCT7A3
+V5XTmz71aVbeOARa@mCT7A3
+S1
+R3
+w1458368028
+R9
+R10
+L0 29
+R11
+r1
+31
+R13
+R14
+R15
+!s110 1589729246
+!s100 ?T^zZH9_J;^C7?2X>nGdd0
+!s108 1589729246.250000
+!i10b 1
+!i103 1
+!s85 0
+!i111 0
+vmy_checker
+R4
+R23
+R6
+r1
+31
+I=e@XiM1OARV`9ZjTLPC6j0
+R24
+S1
+R3
+R25
+R26
+R27
+L0 43
+R11
+R28
+R29
+R30
+R15
+!s100 Z9gFaL5@[oNWJzL58<a:a0
+!s85 0
+!i10b 1
+!i111 0
+Xmyclass_sv_unit
+R4
+I>2D@=l[g;3KkMXbAJj9h20
+V>2D@=l[g;3KkMXbAJj9h20
+S1
+R3
+w1589914929
+8E:/study/Labs/Verify/lab4/myclass.sv
+FE:/study/Labs/Verify/lab4/myclass.sv
+L0 1
+R11
+r1
+31
+R15
+R5
+!s100 d3bY=OboF7cVn3<dP[eH:1
+!s90 -reportprogress|300|-work|work|-vopt|-sv|E:/study/Labs/Verify/lab4/myclass.sv|
+!s108 1589916901.545000
+!s107 E:/study/Labs/Verify/lab4/myclass.sv|
+!i10b 1
+!i103 1
+!s85 0
+!i111 0
+Xtest_fifo_sv_unit
+R4
+V2ajb:FaMAmzFi8ULWmMA:1
+r1
+31
+I2ajb:FaMAmzFi8ULWmMA:1
+S1
+R3
+R25
+R26
+R27
+R22
+L1 1
+R11
+R28
+R29
+R30
+R15
+!s100 KPn]8E9N@=8e<>k:?CYI_3
+!s85 0
+!i10b 1
+!i103 1
+!i111 0
+vtop
+R4
+R23
+R6
+r1
+31
+Id1416_aRU?H=R9ZlQklWU1
+R24
+S1
+R3
+R25
+R26
+R27
+L0 89
+R11
+R28
+R29
+R30
+R15
+!s100 00VR26f9Xk`V]FzYEkoY>2
+!s85 0
+!i10b 1
+!i111 0

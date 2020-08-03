@@ -1,0 +1,50 @@
+
+**** Build of configuration Nios II for project qlab5 ****
+
+make mem_init_generate 
+    878 [main] sh 3556 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+    169 [main] sh 6532 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] echo 5660 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+Info: Building ../qlab5_bsp/
+make --no-print-directory -C ../qlab5_bsp/
+    111 [main] pwd 5532 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+    163 [main] sh 3732 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 3500 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[BSP build complete]
+      1 [main] true 3024 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] echo 7204 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+Post-processing to create mem_init/onchip_memory2_0.hex...
+      1 [main] mkdir 336 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+bash -c 'elf2hex qlab5.elf 0x00002000 0x00003fff --width=32 \
+		--little-endian-mem --create-lanes=0  mem_init/onchip_memory2_0.hex'
+      0 [main] bash 2428 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] echo 7676 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+Post-processing to create mem_init/hdl_sim/onchip_memory2_0.dat...
+      1 [main] mkdir 1668 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+bash -c 'elf2dat --infile=qlab5.elf --outfile=mem_init/hdl_sim/onchip_memory2_0.dat \
+		--base=0x00002000 --end=0x00003fff --width=32 \
+		--little-endian-mem --create-lanes=0 '
+      1 [main] bash 3764 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] echo 4116 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+Post-processing to create mem_init/hdl_sim/onchip_memory2_0.sym...
+the public mailing list cygwin@cygwin.com
+    118 [main] mkdir 1100 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+nios2-elf-nm -n qlab5.elf > mem_init/hdl_sim/onchip_memory2_0.sym
+      0 [main] sh 2544 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+
+**** Build Finished ****

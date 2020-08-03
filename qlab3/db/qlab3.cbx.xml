@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="qlab3">
+		<CBX_INST_ENTRY INSTANCE_NAME="|qlab3|Ind:indicator|altsyncram:WideOr1_rtl_0" CBX_FILE_NAME="altsyncram_9tu.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

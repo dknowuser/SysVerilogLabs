@@ -1,0 +1,41 @@
+D:/stud/5309/qlab59/qlab59/onchip_memory2_0.v {1 {vlog -work work -vopt -nocovercells D:/stud/5309/qlab59/qlab59/onchip_memory2_0.v
+QuestaSim vlog 6.5c Compiler 2009.08 Aug 27 2009
+-- Compiling module onchip_memory2_0
+
+Top level modules:
+	onchip_memory2_0
+
+} {} {}} D:/stud/5309/qlab59/qlab59/qlab5_sys.v {0 {vlog -work work -vopt -nocovercells D:/stud/5309/qlab59/qlab59/qlab5_sys.v
+QuestaSim vlog 6.5c Compiler 2009.08 Aug 27 2009
+-- Compiling module cpu_0_data_master_arbitrator
+-- Compiling module cpu_0_instruction_master_arbitrator
+-- Compiling module onchip_memory2_0_s1_arbitrator
+-- Compiling module pio_0_s1_arbitrator
+-- Compiling module qlab5_sys_reset_clk_0_domain_synch_module
+-- Compiling module qlab5_sys
+** Error: D:/stud/5309/qlab59/qlab59/qlab5_sys.v(1257): Cannot open `include file "c:/altera/91/quartus/eda/sim_lib/altera_mf.v".
+** Error: D:/stud/5309/qlab59/qlab59/qlab5_sys.v(1258): Cannot open `include file "c:/altera/91/quartus/eda/sim_lib/220model.v".
+** Error: D:/stud/5309/qlab59/qlab59/qlab5_sys.v(1259): Cannot open `include file "c:/altera/91/quartus/eda/sim_lib/sgate.v".
+-- Compiling module cpu_0_test_bench
+-- Compiling module cpu_0_rf_module
+-- Compiling module cpu_0
+-- Compiling module onchip_memory2_0
+-- Compiling module pio_0
+-- Compiling module test_bench
+
+} {9.0 12.0} {}} D:/stud/5309/qlab59/qlab59/cpu_0.v {1 {vlog -work work -vopt -nocovercells D:/stud/5309/qlab59/qlab59/cpu_0.v
+QuestaSim vlog 6.5c Compiler 2009.08 Aug 27 2009
+-- Compiling module cpu_0_rf_module
+-- Compiling module cpu_0
+
+Top level modules:
+	cpu_0
+
+} {} {}} D:/stud/5309/qlab59/qlab59/pio_0.v {1 {vlog -work work -vopt -nocovercells D:/stud/5309/qlab59/qlab59/pio_0.v
+QuestaSim vlog 6.5c Compiler 2009.08 Aug 27 2009
+-- Compiling module pio_0
+
+Top level modules:
+	pio_0
+
+} {} {}}

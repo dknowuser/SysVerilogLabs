@@ -1,0 +1,1287 @@
+TimeQuest Timing Analyzer report for qlab3
+Sun Feb 23 01:57:48 2020
+Quartus II 64-Bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clock'
+ 12. Slow Model Hold: 'clock'
+ 13. Slow Model Recovery: 'clock'
+ 14. Slow Model Removal: 'clock'
+ 15. Slow Model Minimum Pulse Width: 'clock'
+ 16. Setup Times
+ 17. Hold Times
+ 18. Clock to Output Times
+ 19. Minimum Clock to Output Times
+ 20. Fast Model Setup Summary
+ 21. Fast Model Hold Summary
+ 22. Fast Model Recovery Summary
+ 23. Fast Model Removal Summary
+ 24. Fast Model Minimum Pulse Width Summary
+ 25. Fast Model Setup: 'clock'
+ 26. Fast Model Hold: 'clock'
+ 27. Fast Model Recovery: 'clock'
+ 28. Fast Model Removal: 'clock'
+ 29. Fast Model Minimum Pulse Width: 'clock'
+ 30. Setup Times
+ 31. Hold Times
+ 32. Clock to Output Times
+ 33. Minimum Clock to Output Times
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Setup Transfers
+ 40. Hold Transfers
+ 41. Recovery Transfers
+ 42. Removal Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                    ;
++--------------------+-----------------------------------------------------------------+
+; Quartus II Version ; Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; qlab3                                                           ;
+; Device Family      ; Cyclone II                                                      ;
+; Device Name        ; EP2C5Q208C8                                                     ;
+; Timing Models      ; Final                                                           ;
+; Delay Model        ; Combined                                                        ;
+; Rise/Fall Delays   ; Unavailable                                                     ;
++--------------------+-----------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; clock      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                           ;
++------------+-----------------+------------+-------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                  ;
++------------+-----------------+------------+-------------------------------------------------------+
+; 312.89 MHz ; 180.05 MHz      ; clock      ; limit due to high minimum pulse width violation (tch) ;
++------------+-----------------+------------+-------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -2.196 ; -31.543       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.499 ; 0.000         ;
++-------+-------+---------------+
+
+
++--------------------------------+
+; Slow Model Recovery Summary    ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -0.595 ; -4.760        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Removal Summary    ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 1.329 ; 0.000         ;
++-------+-------+---------------+
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clock ; -2.277 ; -71.021               ;
++-------+--------+-----------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clock'                                                                                                                                                                                                             ;
++--------+-------------------------------------------------+------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                       ; To Node                                                                                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------------+------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.196 ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 1.000        ; -0.002     ; 3.234      ;
+; -2.181 ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|control_unit:ctrl|ready                                                           ; clock        ; clock       ; 1.000        ; 0.000      ; 3.221      ;
+; -2.179 ; shifter:my_shifter|counter:mycounter|par_out[4] ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 1.000        ; -0.002     ; 3.217      ;
+; -2.164 ; shifter:my_shifter|counter:mycounter|par_out[4] ; shifter:my_shifter|control_unit:ctrl|ready                                                           ; clock        ; clock       ; 1.000        ; 0.000      ; 3.204      ;
+; -2.111 ; shifter:my_shifter|counter:mycounter|par_out[5] ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 1.000        ; -0.002     ; 3.149      ;
+; -2.110 ; shifter:my_shifter|counter:mycounter|par_out[3] ; Ind:indicator|ind_out[2]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 3.147      ;
+; -2.096 ; shifter:my_shifter|counter:mycounter|par_out[5] ; shifter:my_shifter|control_unit:ctrl|ready                                                           ; clock        ; clock       ; 1.000        ; 0.000      ; 3.136      ;
+; -2.094 ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ; clock        ; clock       ; 1.000        ; 0.000      ; 3.134      ;
+; -2.093 ; shifter:my_shifter|counter:mycounter|par_out[4] ; Ind:indicator|ind_out[2]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 3.130      ;
+; -2.077 ; shifter:my_shifter|counter:mycounter|par_out[4] ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ; clock        ; clock       ; 1.000        ; 0.000      ; 3.117      ;
+; -2.048 ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ; clock        ; clock       ; 1.000        ; -0.002     ; 3.086      ;
+; -2.032 ; shifter:my_shifter|counter:mycounter|par_out[6] ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 1.000        ; -0.002     ; 3.070      ;
+; -2.031 ; shifter:my_shifter|counter:mycounter|par_out[4] ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ; clock        ; clock       ; 1.000        ; -0.002     ; 3.069      ;
+; -2.025 ; shifter:my_shifter|counter:mycounter|par_out[5] ; Ind:indicator|ind_out[2]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 3.062      ;
+; -2.017 ; shifter:my_shifter|counter:mycounter|par_out[6] ; shifter:my_shifter|control_unit:ctrl|ready                                                           ; clock        ; clock       ; 1.000        ; 0.000      ; 3.057      ;
+; -2.009 ; shifter:my_shifter|counter:mycounter|par_out[5] ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ; clock        ; clock       ; 1.000        ; 0.000      ; 3.049      ;
+; -1.973 ; shifter:my_shifter|counter:mycounter|par_out[7] ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ; clock        ; clock       ; 1.000        ; 0.000      ; 3.013      ;
+; -1.963 ; shifter:my_shifter|counter:mycounter|par_out[5] ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ; clock        ; clock       ; 1.000        ; -0.002     ; 3.001      ;
+; -1.946 ; shifter:my_shifter|counter:mycounter|par_out[6] ; Ind:indicator|ind_out[2]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 2.983      ;
+; -1.930 ; shifter:my_shifter|counter:mycounter|par_out[6] ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ; clock        ; clock       ; 1.000        ; 0.000      ; 2.970      ;
+; -1.927 ; shifter:my_shifter|counter:mycounter|par_out[7] ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ; clock        ; clock       ; 1.000        ; -0.002     ; 2.965      ;
+; -1.884 ; shifter:my_shifter|counter:mycounter|par_out[6] ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ; clock        ; clock       ; 1.000        ; -0.002     ; 2.922      ;
+; -1.550 ; shifter:my_shifter|counter:mycounter|par_out[3] ; Ind:indicator|ind_out[7]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 2.587      ;
+; -1.538 ; shifter:my_shifter|sh_reg:myshiftreg|content[0] ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ; clock        ; clock       ; 1.000        ; 0.002      ; 2.580      ;
+; -1.533 ; shifter:my_shifter|counter:mycounter|par_out[4] ; Ind:indicator|ind_out[7]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 2.570      ;
+; -1.492 ; shifter:my_shifter|sh_reg:myshiftreg|content[0] ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ; clock        ; clock       ; 1.000        ; 0.000      ; 2.532      ;
+; -1.465 ; shifter:my_shifter|counter:mycounter|par_out[5] ; Ind:indicator|ind_out[7]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 2.502      ;
+; -1.427 ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 2.467      ;
+; -1.386 ; shifter:my_shifter|counter:mycounter|par_out[6] ; Ind:indicator|ind_out[7]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 2.423      ;
+; -1.374 ; shifter:my_shifter|sh_reg:myshiftreg|content[0] ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 1.000        ; 0.000      ; 2.414      ;
+; -1.368 ; shifter:my_shifter|counter:mycounter|par_out[7] ; Ind:indicator|ind_out[2]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 2.405      ;
+; -1.359 ; shifter:my_shifter|sh_reg:myshiftreg|content[0] ; shifter:my_shifter|control_unit:ctrl|ready                                                           ; clock        ; clock       ; 1.000        ; 0.002      ; 2.401      ;
+; -1.357 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ; clock        ; clock       ; 1.000        ; 0.002      ; 2.399      ;
+; -1.341 ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 2.381      ;
+; -1.341 ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 2.381      ;
+; -1.276 ; shifter:my_shifter|counter:mycounter|par_out[7] ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 1.000        ; -0.002     ; 2.314      ;
+; -1.265 ; shifter:my_shifter|counter:mycounter|par_out[2] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 2.305      ;
+; -1.261 ; shifter:my_shifter|counter:mycounter|par_out[7] ; shifter:my_shifter|control_unit:ctrl|ready                                                           ; clock        ; clock       ; 1.000        ; 0.000      ; 2.301      ;
+; -1.255 ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 2.295      ;
+; -1.255 ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 2.295      ;
+; -1.242 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ; clock        ; clock       ; 1.000        ; 0.000      ; 2.282      ;
+; -1.229 ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 2.269      ;
+; -1.179 ; shifter:my_shifter|counter:mycounter|par_out[2] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 2.219      ;
+; -1.169 ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 2.209      ;
+; -1.169 ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 2.209      ;
+; -1.143 ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 2.183      ;
+; -1.134 ; shifter:my_shifter|counter:mycounter|par_out[0] ; Ind:indicator|ind_out[2]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 2.171      ;
+; -1.103 ; shifter:my_shifter|counter:mycounter|par_out[4] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 2.143      ;
+; -1.101 ; shifter:my_shifter|counter:mycounter|par_out[1] ; Ind:indicator|ind_out[2]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 2.138      ;
+; -1.093 ; shifter:my_shifter|counter:mycounter|par_out[2] ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 2.133      ;
+; -1.083 ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[3]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 2.123      ;
+; -1.083 ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 2.123      ;
+; -1.067 ; shifter:my_shifter|counter:mycounter|par_out[5] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 2.107      ;
+; -1.057 ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 2.097      ;
+; -1.017 ; shifter:my_shifter|counter:mycounter|par_out[4] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 2.057      ;
+; -1.007 ; shifter:my_shifter|counter:mycounter|par_out[2] ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 2.047      ;
+; -0.997 ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[2]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 2.037      ;
+; -0.997 ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[3]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 2.037      ;
+; -0.981 ; shifter:my_shifter|counter:mycounter|par_out[5] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 2.021      ;
+; -0.972 ; shifter:my_shifter|counter:mycounter|par_out[6] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 2.012      ;
+; -0.971 ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 2.011      ;
+; -0.931 ; shifter:my_shifter|counter:mycounter|par_out[4] ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 1.971      ;
+; -0.921 ; shifter:my_shifter|counter:mycounter|par_out[2] ; shifter:my_shifter|counter:mycounter|par_out[3]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 1.961      ;
+; -0.911 ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[1]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 1.951      ;
+; -0.911 ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[2]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 1.951      ;
+; -0.824 ; shifter:my_shifter|control_unit:ctrl|ready      ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 1.000        ; -0.002     ; 1.862      ;
+; -0.824 ; shifter:my_shifter|control_unit:ctrl|ready      ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ; clock        ; clock       ; 1.000        ; -0.002     ; 1.862      ;
+; -0.820 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[0]                                                      ; clock        ; clock       ; 1.000        ; 0.002      ; 1.862      ;
+; -0.820 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[1]                                                      ; clock        ; clock       ; 1.000        ; 0.002      ; 1.862      ;
+; -0.820 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[2]                                                      ; clock        ; clock       ; 1.000        ; 0.002      ; 1.862      ;
+; -0.820 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[3]                                                      ; clock        ; clock       ; 1.000        ; 0.002      ; 1.862      ;
+; -0.820 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ; clock        ; clock       ; 1.000        ; 0.002      ; 1.862      ;
+; -0.820 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 1.000        ; 0.002      ; 1.862      ;
+; -0.820 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 1.000        ; 0.002      ; 1.862      ;
+; -0.820 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 1.000        ; 0.002      ; 1.862      ;
+; -0.808 ; shifter:my_shifter|counter:mycounter|par_out[7] ; Ind:indicator|ind_out[7]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 1.845      ;
+; -0.789 ; shifter:my_shifter|counter:mycounter|par_out[2] ; Ind:indicator|ind_out[2]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 1.826      ;
+; -0.747 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|control_unit:ctrl|ready                                                           ; clock        ; clock       ; 1.000        ; 0.002      ; 1.789      ;
+; -0.745 ; shifter:my_shifter|counter:mycounter|par_out[7] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg7 ; clock        ; clock       ; 1.000        ; 0.100      ; 1.799      ;
+; -0.743 ; shifter:my_shifter|counter:mycounter|par_out[2] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg2 ; clock        ; clock       ; 1.000        ; 0.100      ; 1.797      ;
+; -0.731 ; shifter:my_shifter|counter:mycounter|par_out[4] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg4 ; clock        ; clock       ; 1.000        ; 0.100      ; 1.785      ;
+; -0.731 ; shifter:my_shifter|counter:mycounter|par_out[3] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg3 ; clock        ; clock       ; 1.000        ; 0.100      ; 1.785      ;
+; -0.727 ; shifter:my_shifter|counter:mycounter|par_out[6] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg6 ; clock        ; clock       ; 1.000        ; 0.100      ; 1.781      ;
+; -0.724 ; shifter:my_shifter|counter:mycounter|par_out[1] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg1 ; clock        ; clock       ; 1.000        ; 0.100      ; 1.778      ;
+; -0.712 ; shifter:my_shifter|counter:mycounter|par_out[5] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg5 ; clock        ; clock       ; 1.000        ; 0.100      ; 1.766      ;
+; -0.712 ; shifter:my_shifter|counter:mycounter|par_out[0] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 1.000        ; 0.100      ; 1.766      ;
+; -0.567 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[7]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 1.607      ;
+; -0.567 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[6]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 1.607      ;
+; -0.567 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[5]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 1.607      ;
+; -0.567 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[4]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 1.607      ;
+; -0.567 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[3]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 1.607      ;
+; -0.567 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[2]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 1.607      ;
+; -0.567 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[1]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 1.607      ;
+; -0.567 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[0]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 1.607      ;
+; -0.501 ; shifter:my_shifter|counter:mycounter|par_out[5] ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 1.541      ;
+; -0.497 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 1.000        ; 0.000      ; 1.537      ;
+; -0.492 ; shifter:my_shifter|counter:mycounter|par_out[6] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 1.532      ;
+; -0.491 ; shifter:my_shifter|sh_reg:myshiftreg|content[4] ; shifter:my_shifter|sh_reg:myshiftreg|content[3]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 1.531      ;
+; -0.491 ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|counter:mycounter|par_out[3]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 1.531      ;
+; -0.486 ; shifter:my_shifter|sh_reg:myshiftreg|content[2] ; shifter:my_shifter|sh_reg:myshiftreg|content[1]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 1.526      ;
++--------+-------------------------------------------------+------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clock'                                                                                                                                                                                                             ;
++-------+-------------------------------------------------+------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                       ; To Node                                                                                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------------+------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.499 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; shifter:my_shifter|control_unit:ctrl|c_acc[0]   ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; shifter:my_shifter|control_unit:ctrl|ready      ; shifter:my_shifter|control_unit:ctrl|ready                                                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.805      ;
+; 0.837 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|sh_reg:myshiftreg|content[3]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.143      ;
+; 0.841 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|sh_reg:myshiftreg|content[2]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.147      ;
+; 0.844 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|sh_reg:myshiftreg|content[6]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.150      ;
+; 0.844 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|sh_reg:myshiftreg|content[5]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.150      ;
+; 0.846 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|sh_reg:myshiftreg|content[7]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.152      ;
+; 0.849 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|sh_reg:myshiftreg|content[0]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.155      ;
+; 0.850 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|sh_reg:myshiftreg|content[4]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.156      ;
+; 0.851 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|sh_reg:myshiftreg|content[1]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.157      ;
+; 1.162 ; shifter:my_shifter|sh_reg:myshiftreg|content[1] ; shifter:my_shifter|sh_reg:myshiftreg|content[0]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.468      ;
+; 1.165 ; shifter:my_shifter|sh_reg:myshiftreg|content[6] ; shifter:my_shifter|sh_reg:myshiftreg|content[5]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.471      ;
+; 1.166 ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[1]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.472      ;
+; 1.167 ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[0]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.473      ;
+; 1.167 ; shifter:my_shifter|sh_reg:myshiftreg|content[5] ; shifter:my_shifter|sh_reg:myshiftreg|content[4]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.473      ;
+; 1.172 ; shifter:my_shifter|sh_reg:myshiftreg|content[7] ; shifter:my_shifter|sh_reg:myshiftreg|content[6]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.478      ;
+; 1.174 ; shifter:my_shifter|control_unit:ctrl|ready      ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 1.480      ;
+; 1.176 ; shifter:my_shifter|counter:mycounter|par_out[2] ; shifter:my_shifter|counter:mycounter|par_out[2]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.482      ;
+; 1.177 ; shifter:my_shifter|counter:mycounter|par_out[7] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.483      ;
+; 1.186 ; shifter:my_shifter|counter:mycounter|par_out[4] ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.492      ;
+; 1.217 ; shifter:my_shifter|sh_reg:myshiftreg|content[3] ; shifter:my_shifter|sh_reg:myshiftreg|content[2]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.523      ;
+; 1.220 ; shifter:my_shifter|sh_reg:myshiftreg|content[2] ; shifter:my_shifter|sh_reg:myshiftreg|content[1]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.526      ;
+; 1.225 ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|counter:mycounter|par_out[3]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.531      ;
+; 1.225 ; shifter:my_shifter|sh_reg:myshiftreg|content[4] ; shifter:my_shifter|sh_reg:myshiftreg|content[3]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.531      ;
+; 1.226 ; shifter:my_shifter|counter:mycounter|par_out[6] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.532      ;
+; 1.231 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 0.000        ; 0.000      ; 1.537      ;
+; 1.235 ; shifter:my_shifter|counter:mycounter|par_out[5] ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.541      ;
+; 1.301 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[7]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.607      ;
+; 1.301 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[6]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.607      ;
+; 1.301 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[5]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.607      ;
+; 1.301 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[4]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.607      ;
+; 1.301 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[3]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.607      ;
+; 1.301 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[2]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.607      ;
+; 1.301 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[1]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.607      ;
+; 1.301 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[0]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.607      ;
+; 1.399 ; shifter:my_shifter|counter:mycounter|par_out[5] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg5 ; clock        ; clock       ; 0.000        ; 0.100      ; 1.766      ;
+; 1.399 ; shifter:my_shifter|counter:mycounter|par_out[0] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.100      ; 1.766      ;
+; 1.411 ; shifter:my_shifter|counter:mycounter|par_out[1] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg1 ; clock        ; clock       ; 0.000        ; 0.100      ; 1.778      ;
+; 1.414 ; shifter:my_shifter|counter:mycounter|par_out[6] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg6 ; clock        ; clock       ; 0.000        ; 0.100      ; 1.781      ;
+; 1.418 ; shifter:my_shifter|counter:mycounter|par_out[4] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg4 ; clock        ; clock       ; 0.000        ; 0.100      ; 1.785      ;
+; 1.418 ; shifter:my_shifter|counter:mycounter|par_out[3] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg3 ; clock        ; clock       ; 0.000        ; 0.100      ; 1.785      ;
+; 1.430 ; shifter:my_shifter|counter:mycounter|par_out[2] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg2 ; clock        ; clock       ; 0.000        ; 0.100      ; 1.797      ;
+; 1.432 ; shifter:my_shifter|counter:mycounter|par_out[7] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg7 ; clock        ; clock       ; 0.000        ; 0.100      ; 1.799      ;
+; 1.481 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|control_unit:ctrl|ready                                                           ; clock        ; clock       ; 0.000        ; 0.002      ; 1.789      ;
+; 1.523 ; shifter:my_shifter|counter:mycounter|par_out[2] ; Ind:indicator|ind_out[2]                                                                             ; clock        ; clock       ; 0.000        ; -0.003     ; 1.826      ;
+; 1.542 ; shifter:my_shifter|counter:mycounter|par_out[7] ; Ind:indicator|ind_out[7]                                                                             ; clock        ; clock       ; 0.000        ; -0.003     ; 1.845      ;
+; 1.554 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[0]                                                      ; clock        ; clock       ; 0.000        ; 0.002      ; 1.862      ;
+; 1.554 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[1]                                                      ; clock        ; clock       ; 0.000        ; 0.002      ; 1.862      ;
+; 1.554 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[2]                                                      ; clock        ; clock       ; 0.000        ; 0.002      ; 1.862      ;
+; 1.554 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[3]                                                      ; clock        ; clock       ; 0.000        ; 0.002      ; 1.862      ;
+; 1.554 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ; clock        ; clock       ; 0.000        ; 0.002      ; 1.862      ;
+; 1.554 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 0.000        ; 0.002      ; 1.862      ;
+; 1.554 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 0.000        ; 0.002      ; 1.862      ;
+; 1.554 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 0.000        ; 0.002      ; 1.862      ;
+; 1.558 ; shifter:my_shifter|control_unit:ctrl|ready      ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 0.000        ; -0.002     ; 1.862      ;
+; 1.558 ; shifter:my_shifter|control_unit:ctrl|ready      ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ; clock        ; clock       ; 0.000        ; -0.002     ; 1.862      ;
+; 1.645 ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[1]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.951      ;
+; 1.645 ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[2]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.951      ;
+; 1.655 ; shifter:my_shifter|counter:mycounter|par_out[2] ; shifter:my_shifter|counter:mycounter|par_out[3]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.961      ;
+; 1.665 ; shifter:my_shifter|counter:mycounter|par_out[4] ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 1.971      ;
+; 1.705 ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 2.011      ;
+; 1.706 ; shifter:my_shifter|counter:mycounter|par_out[6] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 2.012      ;
+; 1.715 ; shifter:my_shifter|counter:mycounter|par_out[5] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 2.021      ;
+; 1.731 ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[2]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 2.037      ;
+; 1.731 ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[3]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 2.037      ;
+; 1.741 ; shifter:my_shifter|counter:mycounter|par_out[2] ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 2.047      ;
+; 1.751 ; shifter:my_shifter|counter:mycounter|par_out[4] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 2.057      ;
+; 1.791 ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 2.097      ;
+; 1.801 ; shifter:my_shifter|counter:mycounter|par_out[5] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 2.107      ;
+; 1.817 ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[3]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 2.123      ;
+; 1.817 ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 2.123      ;
+; 1.827 ; shifter:my_shifter|counter:mycounter|par_out[2] ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 2.133      ;
+; 1.835 ; shifter:my_shifter|counter:mycounter|par_out[1] ; Ind:indicator|ind_out[2]                                                                             ; clock        ; clock       ; 0.000        ; -0.003     ; 2.138      ;
+; 1.837 ; shifter:my_shifter|counter:mycounter|par_out[4] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 2.143      ;
+; 1.868 ; shifter:my_shifter|counter:mycounter|par_out[0] ; Ind:indicator|ind_out[2]                                                                             ; clock        ; clock       ; 0.000        ; -0.003     ; 2.171      ;
+; 1.877 ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 2.183      ;
+; 1.903 ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 2.209      ;
+; 1.903 ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 2.209      ;
+; 1.913 ; shifter:my_shifter|counter:mycounter|par_out[2] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 2.219      ;
+; 1.963 ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 2.269      ;
+; 1.976 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 2.282      ;
+; 1.989 ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 2.295      ;
+; 1.989 ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 2.295      ;
+; 1.995 ; shifter:my_shifter|counter:mycounter|par_out[7] ; shifter:my_shifter|control_unit:ctrl|ready                                                           ; clock        ; clock       ; 0.000        ; 0.000      ; 2.301      ;
+; 1.999 ; shifter:my_shifter|counter:mycounter|par_out[2] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 2.305      ;
+; 2.010 ; shifter:my_shifter|counter:mycounter|par_out[7] ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 0.000        ; -0.002     ; 2.314      ;
+; 2.022 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ; clock        ; clock       ; 0.000        ; 0.002      ; 2.330      ;
+; 2.075 ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 2.381      ;
+; 2.075 ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 2.381      ;
+; 2.093 ; shifter:my_shifter|sh_reg:myshiftreg|content[0] ; shifter:my_shifter|control_unit:ctrl|ready                                                           ; clock        ; clock       ; 0.000        ; 0.002      ; 2.401      ;
+; 2.102 ; shifter:my_shifter|counter:mycounter|par_out[7] ; Ind:indicator|ind_out[2]                                                                             ; clock        ; clock       ; 0.000        ; -0.003     ; 2.405      ;
+; 2.108 ; shifter:my_shifter|sh_reg:myshiftreg|content[0] ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 0.000        ; 0.000      ; 2.414      ;
+; 2.120 ; shifter:my_shifter|counter:mycounter|par_out[6] ; Ind:indicator|ind_out[7]                                                                             ; clock        ; clock       ; 0.000        ; -0.003     ; 2.423      ;
+; 2.161 ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 2.467      ;
+; 2.199 ; shifter:my_shifter|counter:mycounter|par_out[5] ; Ind:indicator|ind_out[7]                                                                             ; clock        ; clock       ; 0.000        ; -0.003     ; 2.502      ;
+; 2.226 ; shifter:my_shifter|sh_reg:myshiftreg|content[0] ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 2.532      ;
+; 2.267 ; shifter:my_shifter|counter:mycounter|par_out[4] ; Ind:indicator|ind_out[7]                                                                             ; clock        ; clock       ; 0.000        ; -0.003     ; 2.570      ;
+; 2.272 ; shifter:my_shifter|sh_reg:myshiftreg|content[0] ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ; clock        ; clock       ; 0.000        ; 0.002      ; 2.580      ;
+; 2.284 ; shifter:my_shifter|counter:mycounter|par_out[3] ; Ind:indicator|ind_out[7]                                                                             ; clock        ; clock       ; 0.000        ; -0.003     ; 2.587      ;
++-------+-------------------------------------------------+------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Recovery: 'clock'                                                                                                                                                   ;
++--------+-----------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                     ; To Node                                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.595 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[0] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.635      ;
+; -0.595 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[1] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.635      ;
+; -0.595 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[2] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.635      ;
+; -0.595 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[3] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.635      ;
+; -0.595 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[4] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.635      ;
+; -0.595 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[5] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.635      ;
+; -0.595 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[6] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.635      ;
+; -0.595 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[7] ; clock        ; clock       ; 1.000        ; 0.000      ; 1.635      ;
++--------+-----------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Removal: 'clock'                                                                                                                                                   ;
++-------+-----------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                     ; To Node                                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.329 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[0] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.635      ;
+; 1.329 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[1] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.635      ;
+; 1.329 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[2] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.635      ;
+; 1.329 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[3] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.635      ;
+; 1.329 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[4] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.635      ;
+; 1.329 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[5] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.635      ;
+; 1.329 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[6] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.635      ;
+; 1.329 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[7] ; clock        ; clock       ; 0.000        ; 0.000      ; 1.635      ;
++-------+-----------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clock'                                                                                                                                               ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                               ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------------------------------------------------------------+
+; -2.277 ; 0.500        ; 2.777          ; High Pulse Width ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -2.277 ; 0.500        ; 2.777          ; Low Pulse Width  ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -2.277 ; 0.500        ; 2.777          ; High Pulse Width ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -2.277 ; 0.500        ; 2.777          ; Low Pulse Width  ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -2.277 ; 0.500        ; 2.777          ; High Pulse Width ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -2.277 ; 0.500        ; 2.777          ; Low Pulse Width  ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -2.277 ; 0.500        ; 2.777          ; High Pulse Width ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -2.277 ; 0.500        ; 2.777          ; Low Pulse Width  ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -2.277 ; 0.500        ; 2.777          ; High Pulse Width ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -2.277 ; 0.500        ; 2.777          ; Low Pulse Width  ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -2.277 ; 0.500        ; 2.777          ; High Pulse Width ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -2.277 ; 0.500        ; 2.777          ; Low Pulse Width  ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -2.277 ; 0.500        ; 2.777          ; High Pulse Width ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -2.277 ; 0.500        ; 2.777          ; Low Pulse Width  ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -2.277 ; 0.500        ; 2.777          ; High Pulse Width ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -2.277 ; 0.500        ; 2.777          ; Low Pulse Width  ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.941 ; 1.000        ; 2.941          ; Port Rate        ; clock ; Rise       ; clock                                                                                                ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clock ; Rise       ; Ind:indicator|ind_out[2]                                                                             ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; Ind:indicator|ind_out[2]                                                                             ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clock ; Rise       ; Ind:indicator|ind_out[7]                                                                             ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; Ind:indicator|ind_out[7]                                                                             ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|control_unit:ctrl|cont                                                            ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|control_unit:ctrl|cont                                                            ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|control_unit:ctrl|ready                                                           ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|control_unit:ctrl|ready                                                           ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[0]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[0]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[1]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[1]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[2]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[2]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[3]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[3]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[0]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[0]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[1]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[1]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[2]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[2]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[3]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[3]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[4]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[4]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[5]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[5]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[6]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[6]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[7]                                                      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[7]                                                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock|combout                                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock|combout                                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock~clkctrl|inclk[0]                                                                               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock~clkctrl|inclk[0]                                                                               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock~clkctrl|outclk                                                                                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock~clkctrl|outclk                                                                                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; indicator|WideOr1_rtl_0|auto_generated|ram_block1a0|clk0                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; indicator|WideOr1_rtl_0|auto_generated|ram_block1a0|clk0                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; indicator|ind_out[2]|clk                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; indicator|ind_out[2]|clk                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; indicator|ind_out[7]|clk                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; indicator|ind_out[7]|clk                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|ctrl|c_acc[0]|clk                                                                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|ctrl|c_acc[0]|clk                                                                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|ctrl|cont|clk                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|ctrl|cont|clk                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|ctrl|ready|clk                                                                            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|ctrl|ready|clk                                                                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|ctrl|state[0]|clk                                                                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|ctrl|state[0]|clk                                                                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|mycounter|par_out[0]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|mycounter|par_out[0]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|mycounter|par_out[1]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|mycounter|par_out[1]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|mycounter|par_out[2]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|mycounter|par_out[2]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|mycounter|par_out[3]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|mycounter|par_out[3]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|mycounter|par_out[4]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|mycounter|par_out[4]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|mycounter|par_out[5]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|mycounter|par_out[5]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|mycounter|par_out[6]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|mycounter|par_out[6]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|mycounter|par_out[7]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|mycounter|par_out[7]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|myshiftreg|content[0]|clk                                                                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|myshiftreg|content[0]|clk                                                                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|myshiftreg|content[1]|clk                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; d[*]      ; clock      ; 4.786 ; 4.786 ; Rise       ; clock           ;
+;  d[0]     ; clock      ; 4.385 ; 4.385 ; Rise       ; clock           ;
+;  d[1]     ; clock      ; 4.581 ; 4.581 ; Rise       ; clock           ;
+;  d[2]     ; clock      ; 4.553 ; 4.553 ; Rise       ; clock           ;
+;  d[3]     ; clock      ; 0.289 ; 0.289 ; Rise       ; clock           ;
+;  d[4]     ; clock      ; 0.270 ; 0.270 ; Rise       ; clock           ;
+;  d[5]     ; clock      ; 4.764 ; 4.764 ; Rise       ; clock           ;
+;  d[6]     ; clock      ; 4.786 ; 4.786 ; Rise       ; clock           ;
+;  d[7]     ; clock      ; 4.423 ; 4.423 ; Rise       ; clock           ;
+; start     ; clock      ; 5.873 ; 5.873 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; d[*]      ; clock      ; -0.004 ; -0.004 ; Rise       ; clock           ;
+;  d[0]     ; clock      ; -4.119 ; -4.119 ; Rise       ; clock           ;
+;  d[1]     ; clock      ; -4.315 ; -4.315 ; Rise       ; clock           ;
+;  d[2]     ; clock      ; -4.287 ; -4.287 ; Rise       ; clock           ;
+;  d[3]     ; clock      ; -0.023 ; -0.023 ; Rise       ; clock           ;
+;  d[4]     ; clock      ; -0.004 ; -0.004 ; Rise       ; clock           ;
+;  d[5]     ; clock      ; -4.498 ; -4.498 ; Rise       ; clock           ;
+;  d[6]     ; clock      ; -4.520 ; -4.520 ; Rise       ; clock           ;
+;  d[7]     ; clock      ; -4.157 ; -4.157 ; Rise       ; clock           ;
+; start     ; clock      ; -4.623 ; -4.623 ; Rise       ; clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Clock to Output Times                                                     ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; ind_out[*]  ; clock      ; 11.856 ; 11.856 ; Rise       ; clock           ;
+;  ind_out[0] ; clock      ; 11.495 ; 11.495 ; Rise       ; clock           ;
+;  ind_out[1] ; clock      ; 11.496 ; 11.496 ; Rise       ; clock           ;
+;  ind_out[2] ; clock      ; 7.380  ; 7.380  ; Rise       ; clock           ;
+;  ind_out[3] ; clock      ; 11.856 ; 11.856 ; Rise       ; clock           ;
+;  ind_out[4] ; clock      ; 11.071 ; 11.071 ; Rise       ; clock           ;
+;  ind_out[5] ; clock      ; 11.463 ; 11.463 ; Rise       ; clock           ;
+;  ind_out[6] ; clock      ; 11.101 ; 11.101 ; Rise       ; clock           ;
+;  ind_out[7] ; clock      ; 7.384  ; 7.384  ; Rise       ; clock           ;
+; ready       ; clock      ; 7.587  ; 7.587  ; Rise       ; clock           ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                             ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; ind_out[*]  ; clock      ; 7.380  ; 7.380  ; Rise       ; clock           ;
+;  ind_out[0] ; clock      ; 11.495 ; 11.495 ; Rise       ; clock           ;
+;  ind_out[1] ; clock      ; 11.496 ; 11.496 ; Rise       ; clock           ;
+;  ind_out[2] ; clock      ; 7.380  ; 7.380  ; Rise       ; clock           ;
+;  ind_out[3] ; clock      ; 11.856 ; 11.856 ; Rise       ; clock           ;
+;  ind_out[4] ; clock      ; 11.071 ; 11.071 ; Rise       ; clock           ;
+;  ind_out[5] ; clock      ; 11.463 ; 11.463 ; Rise       ; clock           ;
+;  ind_out[6] ; clock      ; 11.101 ; 11.101 ; Rise       ; clock           ;
+;  ind_out[7] ; clock      ; 7.384  ; 7.384  ; Rise       ; clock           ;
+; ready       ; clock      ; 7.587  ; 7.587  ; Rise       ; clock           ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -0.051 ; -0.143        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Fast Model Recovery Summary   ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.299 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Fast Model Removal Summary    ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.581 ; 0.000         ;
++-------+-------+---------------+
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clock ; -1.423 ; -46.148               ;
++-------+--------+-----------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clock'                                                                                                                                                                                                             ;
++--------+-------------------------------------------------+------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                       ; To Node                                                                                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------------+------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.051 ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 1.000        ; -0.002     ; 1.081      ;
+; -0.042 ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|control_unit:ctrl|ready                                                           ; clock        ; clock       ; 1.000        ; 0.000      ; 1.074      ;
+; -0.042 ; shifter:my_shifter|counter:mycounter|par_out[4] ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 1.000        ; -0.002     ; 1.072      ;
+; -0.033 ; shifter:my_shifter|counter:mycounter|par_out[4] ; shifter:my_shifter|control_unit:ctrl|ready                                                           ; clock        ; clock       ; 1.000        ; 0.000      ; 1.065      ;
+; -0.032 ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ; clock        ; clock       ; 1.000        ; -0.002     ; 1.062      ;
+; -0.023 ; shifter:my_shifter|counter:mycounter|par_out[4] ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ; clock        ; clock       ; 1.000        ; -0.002     ; 1.053      ;
+; -0.010 ; shifter:my_shifter|counter:mycounter|par_out[3] ; Ind:indicator|ind_out[2]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 1.039      ;
+; -0.008 ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ; clock        ; clock       ; 1.000        ; 0.000      ; 1.040      ;
+; -0.006 ; shifter:my_shifter|counter:mycounter|par_out[5] ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 1.000        ; -0.002     ; 1.036      ;
+; -0.001 ; shifter:my_shifter|counter:mycounter|par_out[4] ; Ind:indicator|ind_out[2]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 1.030      ;
+; 0.001  ; shifter:my_shifter|counter:mycounter|par_out[4] ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ; clock        ; clock       ; 1.000        ; 0.000      ; 1.031      ;
+; 0.003  ; shifter:my_shifter|counter:mycounter|par_out[5] ; shifter:my_shifter|control_unit:ctrl|ready                                                           ; clock        ; clock       ; 1.000        ; 0.000      ; 1.029      ;
+; 0.013  ; shifter:my_shifter|counter:mycounter|par_out[5] ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ; clock        ; clock       ; 1.000        ; -0.002     ; 1.017      ;
+; 0.021  ; shifter:my_shifter|counter:mycounter|par_out[6] ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 1.000        ; -0.002     ; 1.009      ;
+; 0.021  ; shifter:my_shifter|counter:mycounter|par_out[7] ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ; clock        ; clock       ; 1.000        ; -0.002     ; 1.009      ;
+; 0.030  ; shifter:my_shifter|counter:mycounter|par_out[6] ; shifter:my_shifter|control_unit:ctrl|ready                                                           ; clock        ; clock       ; 1.000        ; 0.000      ; 1.002      ;
+; 0.035  ; shifter:my_shifter|counter:mycounter|par_out[5] ; Ind:indicator|ind_out[2]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 0.994      ;
+; 0.037  ; shifter:my_shifter|counter:mycounter|par_out[5] ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ; clock        ; clock       ; 1.000        ; 0.000      ; 0.995      ;
+; 0.040  ; shifter:my_shifter|counter:mycounter|par_out[6] ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ; clock        ; clock       ; 1.000        ; -0.002     ; 0.990      ;
+; 0.045  ; shifter:my_shifter|counter:mycounter|par_out[7] ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ; clock        ; clock       ; 1.000        ; 0.000      ; 0.987      ;
+; 0.062  ; shifter:my_shifter|counter:mycounter|par_out[6] ; Ind:indicator|ind_out[2]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 0.967      ;
+; 0.064  ; shifter:my_shifter|counter:mycounter|par_out[6] ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ; clock        ; clock       ; 1.000        ; 0.000      ; 0.968      ;
+; 0.152  ; shifter:my_shifter|counter:mycounter|par_out[3] ; Ind:indicator|ind_out[7]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 0.877      ;
+; 0.161  ; shifter:my_shifter|counter:mycounter|par_out[4] ; Ind:indicator|ind_out[7]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 0.868      ;
+; 0.166  ; shifter:my_shifter|sh_reg:myshiftreg|content[0] ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ; clock        ; clock       ; 1.000        ; 0.000      ; 0.866      ;
+; 0.177  ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.855      ;
+; 0.190  ; shifter:my_shifter|sh_reg:myshiftreg|content[0] ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ; clock        ; clock       ; 1.000        ; 0.002      ; 0.844      ;
+; 0.197  ; shifter:my_shifter|counter:mycounter|par_out[5] ; Ind:indicator|ind_out[7]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 0.832      ;
+; 0.199  ; shifter:my_shifter|counter:mycounter|par_out[7] ; Ind:indicator|ind_out[2]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 0.830      ;
+; 0.212  ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.820      ;
+; 0.212  ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ; clock        ; clock       ; 1.000        ; 0.000      ; 0.820      ;
+; 0.212  ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.820      ;
+; 0.224  ; shifter:my_shifter|counter:mycounter|par_out[6] ; Ind:indicator|ind_out[7]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 0.805      ;
+; 0.232  ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ; clock        ; clock       ; 1.000        ; 0.002      ; 0.802      ;
+; 0.242  ; shifter:my_shifter|counter:mycounter|par_out[2] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.790      ;
+; 0.243  ; shifter:my_shifter|counter:mycounter|par_out[7] ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 1.000        ; -0.002     ; 0.787      ;
+; 0.247  ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.785      ;
+; 0.247  ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.785      ;
+; 0.252  ; shifter:my_shifter|counter:mycounter|par_out[7] ; shifter:my_shifter|control_unit:ctrl|ready                                                           ; clock        ; clock       ; 1.000        ; 0.000      ; 0.780      ;
+; 0.257  ; shifter:my_shifter|sh_reg:myshiftreg|content[0] ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 1.000        ; 0.000      ; 0.775      ;
+; 0.264  ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.768      ;
+; 0.266  ; shifter:my_shifter|sh_reg:myshiftreg|content[0] ; shifter:my_shifter|control_unit:ctrl|ready                                                           ; clock        ; clock       ; 1.000        ; 0.002      ; 0.768      ;
+; 0.277  ; shifter:my_shifter|counter:mycounter|par_out[2] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.755      ;
+; 0.282  ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.750      ;
+; 0.282  ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.750      ;
+; 0.283  ; shifter:my_shifter|control_unit:ctrl|ready      ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 1.000        ; -0.002     ; 0.747      ;
+; 0.283  ; shifter:my_shifter|control_unit:ctrl|ready      ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ; clock        ; clock       ; 1.000        ; -0.002     ; 0.747      ;
+; 0.286  ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[0]                                                      ; clock        ; clock       ; 1.000        ; 0.002      ; 0.748      ;
+; 0.286  ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[1]                                                      ; clock        ; clock       ; 1.000        ; 0.002      ; 0.748      ;
+; 0.286  ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[2]                                                      ; clock        ; clock       ; 1.000        ; 0.002      ; 0.748      ;
+; 0.286  ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[3]                                                      ; clock        ; clock       ; 1.000        ; 0.002      ; 0.748      ;
+; 0.286  ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ; clock        ; clock       ; 1.000        ; 0.002      ; 0.748      ;
+; 0.286  ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 1.000        ; 0.002      ; 0.748      ;
+; 0.286  ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 1.000        ; 0.002      ; 0.748      ;
+; 0.286  ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 1.000        ; 0.002      ; 0.748      ;
+; 0.299  ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.733      ;
+; 0.308  ; shifter:my_shifter|counter:mycounter|par_out[4] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.724      ;
+; 0.312  ; shifter:my_shifter|counter:mycounter|par_out[2] ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.720      ;
+; 0.317  ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[3]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.715      ;
+; 0.317  ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.715      ;
+; 0.328  ; shifter:my_shifter|counter:mycounter|par_out[0] ; Ind:indicator|ind_out[2]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 0.701      ;
+; 0.330  ; shifter:my_shifter|counter:mycounter|par_out[5] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.702      ;
+; 0.332  ; shifter:my_shifter|counter:mycounter|par_out[1] ; Ind:indicator|ind_out[2]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 0.697      ;
+; 0.334  ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.698      ;
+; 0.343  ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[7]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.689      ;
+; 0.343  ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[6]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.689      ;
+; 0.343  ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[5]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.689      ;
+; 0.343  ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[4]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.689      ;
+; 0.343  ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[3]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.689      ;
+; 0.343  ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[2]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.689      ;
+; 0.343  ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[1]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.689      ;
+; 0.343  ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[0]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.689      ;
+; 0.343  ; shifter:my_shifter|counter:mycounter|par_out[4] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.689      ;
+; 0.347  ; shifter:my_shifter|counter:mycounter|par_out[2] ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.685      ;
+; 0.352  ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[2]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.680      ;
+; 0.352  ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[3]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.680      ;
+; 0.361  ; shifter:my_shifter|counter:mycounter|par_out[7] ; Ind:indicator|ind_out[7]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 0.668      ;
+; 0.365  ; shifter:my_shifter|counter:mycounter|par_out[5] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.667      ;
+; 0.368  ; shifter:my_shifter|counter:mycounter|par_out[6] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.664      ;
+; 0.369  ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.663      ;
+; 0.378  ; shifter:my_shifter|counter:mycounter|par_out[4] ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.654      ;
+; 0.382  ; shifter:my_shifter|counter:mycounter|par_out[2] ; shifter:my_shifter|counter:mycounter|par_out[3]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.650      ;
+; 0.387  ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[1]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.645      ;
+; 0.387  ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[2]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.645      ;
+; 0.405  ; shifter:my_shifter|counter:mycounter|par_out[2] ; Ind:indicator|ind_out[2]                                                                             ; clock        ; clock       ; 1.000        ; -0.003     ; 0.624      ;
+; 0.435  ; shifter:my_shifter|counter:mycounter|par_out[7] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg7 ; clock        ; clock       ; 1.000        ; 0.062      ; 0.626      ;
+; 0.437  ; shifter:my_shifter|counter:mycounter|par_out[2] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg2 ; clock        ; clock       ; 1.000        ; 0.062      ; 0.624      ;
+; 0.438  ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|control_unit:ctrl|ready                                                           ; clock        ; clock       ; 1.000        ; 0.002      ; 0.596      ;
+; 0.445  ; shifter:my_shifter|counter:mycounter|par_out[4] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg4 ; clock        ; clock       ; 1.000        ; 0.062      ; 0.616      ;
+; 0.445  ; shifter:my_shifter|counter:mycounter|par_out[3] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg3 ; clock        ; clock       ; 1.000        ; 0.062      ; 0.616      ;
+; 0.447  ; shifter:my_shifter|counter:mycounter|par_out[6] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg6 ; clock        ; clock       ; 1.000        ; 0.062      ; 0.614      ;
+; 0.448  ; shifter:my_shifter|counter:mycounter|par_out[1] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg1 ; clock        ; clock       ; 1.000        ; 0.062      ; 0.613      ;
+; 0.454  ; shifter:my_shifter|counter:mycounter|par_out[0] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 1.000        ; 0.062      ; 0.607      ;
+; 0.456  ; shifter:my_shifter|counter:mycounter|par_out[5] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg5 ; clock        ; clock       ; 1.000        ; 0.062      ; 0.605      ;
+; 0.477  ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 1.000        ; 0.000      ; 0.555      ;
+; 0.501  ; shifter:my_shifter|sh_reg:myshiftreg|content[4] ; shifter:my_shifter|sh_reg:myshiftreg|content[3]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.531      ;
+; 0.503  ; shifter:my_shifter|sh_reg:myshiftreg|content[2] ; shifter:my_shifter|sh_reg:myshiftreg|content[1]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.529      ;
+; 0.505  ; shifter:my_shifter|counter:mycounter|par_out[5] ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.527      ;
+; 0.506  ; shifter:my_shifter|sh_reg:myshiftreg|content[3] ; shifter:my_shifter|sh_reg:myshiftreg|content[2]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.526      ;
+; 0.508  ; shifter:my_shifter|counter:mycounter|par_out[6] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.524      ;
++--------+-------------------------------------------------+------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clock'                                                                                                                                                                                                             ;
++-------+-------------------------------------------------+------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                       ; To Node                                                                                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------------+------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; shifter:my_shifter|control_unit:ctrl|c_acc[0]   ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; shifter:my_shifter|control_unit:ctrl|ready      ; shifter:my_shifter|control_unit:ctrl|ready                                                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.282 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|sh_reg:myshiftreg|content[3]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.434      ;
+; 0.285 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|sh_reg:myshiftreg|content[2]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.437      ;
+; 0.288 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|sh_reg:myshiftreg|content[6]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.440      ;
+; 0.288 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|sh_reg:myshiftreg|content[5]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.440      ;
+; 0.293 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|sh_reg:myshiftreg|content[0]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.445      ;
+; 0.294 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|sh_reg:myshiftreg|content[7]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.446      ;
+; 0.294 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|sh_reg:myshiftreg|content[4]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.446      ;
+; 0.294 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|sh_reg:myshiftreg|content[1]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.446      ;
+; 0.355 ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[0]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.507      ;
+; 0.355 ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[1]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.507      ;
+; 0.359 ; shifter:my_shifter|control_unit:ctrl|ready      ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.511      ;
+; 0.360 ; shifter:my_shifter|counter:mycounter|par_out[2] ; shifter:my_shifter|counter:mycounter|par_out[2]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; shifter:my_shifter|sh_reg:myshiftreg|content[1] ; shifter:my_shifter|sh_reg:myshiftreg|content[0]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361 ; shifter:my_shifter|counter:mycounter|par_out[7] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; shifter:my_shifter|sh_reg:myshiftreg|content[6] ; shifter:my_shifter|sh_reg:myshiftreg|content[5]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.513      ;
+; 0.363 ; shifter:my_shifter|sh_reg:myshiftreg|content[5] ; shifter:my_shifter|sh_reg:myshiftreg|content[4]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.515      ;
+; 0.364 ; shifter:my_shifter|counter:mycounter|par_out[4] ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.516      ;
+; 0.366 ; shifter:my_shifter|sh_reg:myshiftreg|content[7] ; shifter:my_shifter|sh_reg:myshiftreg|content[6]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.518      ;
+; 0.371 ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|counter:mycounter|par_out[3]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372 ; shifter:my_shifter|counter:mycounter|par_out[6] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.524      ;
+; 0.374 ; shifter:my_shifter|sh_reg:myshiftreg|content[3] ; shifter:my_shifter|sh_reg:myshiftreg|content[2]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.526      ;
+; 0.375 ; shifter:my_shifter|counter:mycounter|par_out[5] ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.527      ;
+; 0.377 ; shifter:my_shifter|sh_reg:myshiftreg|content[2] ; shifter:my_shifter|sh_reg:myshiftreg|content[1]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.529      ;
+; 0.379 ; shifter:my_shifter|sh_reg:myshiftreg|content[4] ; shifter:my_shifter|sh_reg:myshiftreg|content[3]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.531      ;
+; 0.403 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.555      ;
+; 0.405 ; shifter:my_shifter|counter:mycounter|par_out[5] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg5 ; clock        ; clock       ; 0.000        ; 0.062      ; 0.605      ;
+; 0.407 ; shifter:my_shifter|counter:mycounter|par_out[0] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg0 ; clock        ; clock       ; 0.000        ; 0.062      ; 0.607      ;
+; 0.413 ; shifter:my_shifter|counter:mycounter|par_out[1] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg1 ; clock        ; clock       ; 0.000        ; 0.062      ; 0.613      ;
+; 0.414 ; shifter:my_shifter|counter:mycounter|par_out[6] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg6 ; clock        ; clock       ; 0.000        ; 0.062      ; 0.614      ;
+; 0.416 ; shifter:my_shifter|counter:mycounter|par_out[4] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg4 ; clock        ; clock       ; 0.000        ; 0.062      ; 0.616      ;
+; 0.416 ; shifter:my_shifter|counter:mycounter|par_out[3] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg3 ; clock        ; clock       ; 0.000        ; 0.062      ; 0.616      ;
+; 0.424 ; shifter:my_shifter|counter:mycounter|par_out[2] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg2 ; clock        ; clock       ; 0.000        ; 0.062      ; 0.624      ;
+; 0.426 ; shifter:my_shifter|counter:mycounter|par_out[7] ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg7 ; clock        ; clock       ; 0.000        ; 0.062      ; 0.626      ;
+; 0.442 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|control_unit:ctrl|ready                                                           ; clock        ; clock       ; 0.000        ; 0.002      ; 0.596      ;
+; 0.475 ; shifter:my_shifter|counter:mycounter|par_out[2] ; Ind:indicator|ind_out[2]                                                                             ; clock        ; clock       ; 0.000        ; -0.003     ; 0.624      ;
+; 0.493 ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[1]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.645      ;
+; 0.493 ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[2]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.645      ;
+; 0.498 ; shifter:my_shifter|counter:mycounter|par_out[2] ; shifter:my_shifter|counter:mycounter|par_out[3]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.650      ;
+; 0.502 ; shifter:my_shifter|counter:mycounter|par_out[4] ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.654      ;
+; 0.511 ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.663      ;
+; 0.512 ; shifter:my_shifter|counter:mycounter|par_out[6] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.664      ;
+; 0.515 ; shifter:my_shifter|counter:mycounter|par_out[5] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.667      ;
+; 0.519 ; shifter:my_shifter|counter:mycounter|par_out[7] ; Ind:indicator|ind_out[7]                                                                             ; clock        ; clock       ; 0.000        ; -0.003     ; 0.668      ;
+; 0.528 ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[2]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.680      ;
+; 0.528 ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[3]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.680      ;
+; 0.533 ; shifter:my_shifter|counter:mycounter|par_out[2] ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.685      ;
+; 0.537 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[7]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.689      ;
+; 0.537 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[6]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.689      ;
+; 0.537 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[5]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.689      ;
+; 0.537 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[4]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.689      ;
+; 0.537 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[3]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.689      ;
+; 0.537 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[2]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.689      ;
+; 0.537 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[1]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.689      ;
+; 0.537 ; shifter:my_shifter|control_unit:ctrl|cont       ; shifter:my_shifter|sh_reg:myshiftreg|content[0]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.689      ;
+; 0.537 ; shifter:my_shifter|counter:mycounter|par_out[4] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.689      ;
+; 0.546 ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.698      ;
+; 0.548 ; shifter:my_shifter|counter:mycounter|par_out[1] ; Ind:indicator|ind_out[2]                                                                             ; clock        ; clock       ; 0.000        ; -0.003     ; 0.697      ;
+; 0.550 ; shifter:my_shifter|counter:mycounter|par_out[5] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.702      ;
+; 0.552 ; shifter:my_shifter|counter:mycounter|par_out[0] ; Ind:indicator|ind_out[2]                                                                             ; clock        ; clock       ; 0.000        ; -0.003     ; 0.701      ;
+; 0.563 ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[3]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.715      ;
+; 0.563 ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.715      ;
+; 0.568 ; shifter:my_shifter|counter:mycounter|par_out[2] ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.720      ;
+; 0.572 ; shifter:my_shifter|counter:mycounter|par_out[4] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.724      ;
+; 0.581 ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.733      ;
+; 0.594 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[0]                                                      ; clock        ; clock       ; 0.000        ; 0.002      ; 0.748      ;
+; 0.594 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[1]                                                      ; clock        ; clock       ; 0.000        ; 0.002      ; 0.748      ;
+; 0.594 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[2]                                                      ; clock        ; clock       ; 0.000        ; 0.002      ; 0.748      ;
+; 0.594 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[3]                                                      ; clock        ; clock       ; 0.000        ; 0.002      ; 0.748      ;
+; 0.594 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ; clock        ; clock       ; 0.000        ; 0.002      ; 0.748      ;
+; 0.594 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 0.000        ; 0.002      ; 0.748      ;
+; 0.594 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 0.000        ; 0.002      ; 0.748      ;
+; 0.594 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 0.000        ; 0.002      ; 0.748      ;
+; 0.597 ; shifter:my_shifter|control_unit:ctrl|ready      ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 0.000        ; -0.002     ; 0.747      ;
+; 0.597 ; shifter:my_shifter|control_unit:ctrl|ready      ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ; clock        ; clock       ; 0.000        ; -0.002     ; 0.747      ;
+; 0.598 ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.750      ;
+; 0.598 ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.750      ;
+; 0.603 ; shifter:my_shifter|counter:mycounter|par_out[2] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.755      ;
+; 0.614 ; shifter:my_shifter|sh_reg:myshiftreg|content[0] ; shifter:my_shifter|control_unit:ctrl|ready                                                           ; clock        ; clock       ; 0.000        ; 0.002      ; 0.768      ;
+; 0.616 ; shifter:my_shifter|counter:mycounter|par_out[3] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.768      ;
+; 0.623 ; shifter:my_shifter|sh_reg:myshiftreg|content[0] ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.775      ;
+; 0.628 ; shifter:my_shifter|counter:mycounter|par_out[7] ; shifter:my_shifter|control_unit:ctrl|ready                                                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.780      ;
+; 0.633 ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.785      ;
+; 0.633 ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.785      ;
+; 0.637 ; shifter:my_shifter|counter:mycounter|par_out[7] ; shifter:my_shifter|control_unit:ctrl|cont                                                            ; clock        ; clock       ; 0.000        ; -0.002     ; 0.787      ;
+; 0.638 ; shifter:my_shifter|counter:mycounter|par_out[2] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.790      ;
+; 0.644 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ; clock        ; clock       ; 0.000        ; 0.002      ; 0.798      ;
+; 0.656 ; shifter:my_shifter|counter:mycounter|par_out[6] ; Ind:indicator|ind_out[7]                                                                             ; clock        ; clock       ; 0.000        ; -0.003     ; 0.805      ;
+; 0.668 ; shifter:my_shifter|control_unit:ctrl|state[0]   ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.820      ;
+; 0.668 ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.820      ;
+; 0.668 ; shifter:my_shifter|counter:mycounter|par_out[1] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.820      ;
+; 0.681 ; shifter:my_shifter|counter:mycounter|par_out[7] ; Ind:indicator|ind_out[2]                                                                             ; clock        ; clock       ; 0.000        ; -0.003     ; 0.830      ;
+; 0.683 ; shifter:my_shifter|counter:mycounter|par_out[5] ; Ind:indicator|ind_out[7]                                                                             ; clock        ; clock       ; 0.000        ; -0.003     ; 0.832      ;
+; 0.690 ; shifter:my_shifter|sh_reg:myshiftreg|content[0] ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ; clock        ; clock       ; 0.000        ; 0.002      ; 0.844      ;
+; 0.703 ; shifter:my_shifter|counter:mycounter|par_out[0] ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.855      ;
+; 0.714 ; shifter:my_shifter|sh_reg:myshiftreg|content[0] ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ; clock        ; clock       ; 0.000        ; 0.000      ; 0.866      ;
+; 0.719 ; shifter:my_shifter|counter:mycounter|par_out[4] ; Ind:indicator|ind_out[7]                                                                             ; clock        ; clock       ; 0.000        ; -0.003     ; 0.868      ;
+; 0.728 ; shifter:my_shifter|counter:mycounter|par_out[3] ; Ind:indicator|ind_out[7]                                                                             ; clock        ; clock       ; 0.000        ; -0.003     ; 0.877      ;
++-------+-------------------------------------------------+------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Recovery: 'clock'                                                                                                                                                  ;
++-------+-----------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                     ; To Node                                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.299 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[0] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.733      ;
+; 0.299 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[1] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.733      ;
+; 0.299 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[2] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.733      ;
+; 0.299 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[3] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.733      ;
+; 0.299 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[4] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.733      ;
+; 0.299 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[5] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.733      ;
+; 0.299 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[6] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.733      ;
+; 0.299 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[7] ; clock        ; clock       ; 1.000        ; 0.000      ; 0.733      ;
++-------+-----------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Removal: 'clock'                                                                                                                                                   ;
++-------+-----------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                     ; To Node                                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.581 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[0] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.733      ;
+; 0.581 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[1] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.733      ;
+; 0.581 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[2] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.733      ;
+; 0.581 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[3] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.733      ;
+; 0.581 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[4] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.733      ;
+; 0.581 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[5] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.733      ;
+; 0.581 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[6] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.733      ;
+; 0.581 ; shifter:my_shifter|control_unit:ctrl|c_acc[0] ; shifter:my_shifter|counter:mycounter|par_out[7] ; clock        ; clock       ; 0.000        ; 0.000      ; 0.733      ;
++-------+-----------------------------------------------+-------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clock'                                                                                                                                               ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                                                               ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------------------------------------------------------------+
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg5 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg6 ;
+; -1.423 ; 0.500        ; 1.923          ; High Pulse Width ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.423 ; 0.500        ; 1.923          ; Low Pulse Width  ; clock ; Rise       ; Ind:indicator|altsyncram:WideOr1_rtl_0|altsyncram_9tu:auto_generated|ram_block1a0~porta_address_reg7 ;
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock ; Rise       ; clock                                                                                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Ind:indicator|ind_out[2]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Ind:indicator|ind_out[2]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; Ind:indicator|ind_out[7]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; Ind:indicator|ind_out[7]                                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|control_unit:ctrl|c_acc[0]                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|control_unit:ctrl|cont                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|control_unit:ctrl|cont                                                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|control_unit:ctrl|ready                                                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|control_unit:ctrl|ready                                                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|control_unit:ctrl|state[0]                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[0]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[0]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[1]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[1]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[2]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[2]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[3]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[3]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[4]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[5]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[6]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|counter:mycounter|par_out[7]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[0]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[0]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[1]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[1]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[2]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[2]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[3]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[3]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[4]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[4]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[5]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[5]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[6]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[6]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[7]                                                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; shifter:my_shifter|sh_reg:myshiftreg|content[7]                                                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock|combout                                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock|combout                                                                                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock~clkctrl|inclk[0]                                                                               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock~clkctrl|inclk[0]                                                                               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock~clkctrl|outclk                                                                                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock~clkctrl|outclk                                                                                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; indicator|WideOr1_rtl_0|auto_generated|ram_block1a0|clk0                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; indicator|WideOr1_rtl_0|auto_generated|ram_block1a0|clk0                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; indicator|ind_out[2]|clk                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; indicator|ind_out[2]|clk                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; indicator|ind_out[7]|clk                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; indicator|ind_out[7]|clk                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|ctrl|c_acc[0]|clk                                                                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|ctrl|c_acc[0]|clk                                                                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|ctrl|cont|clk                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|ctrl|cont|clk                                                                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|ctrl|ready|clk                                                                            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|ctrl|ready|clk                                                                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|ctrl|state[0]|clk                                                                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|ctrl|state[0]|clk                                                                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|mycounter|par_out[0]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|mycounter|par_out[0]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|mycounter|par_out[1]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|mycounter|par_out[1]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|mycounter|par_out[2]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|mycounter|par_out[2]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|mycounter|par_out[3]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|mycounter|par_out[3]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|mycounter|par_out[4]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|mycounter|par_out[4]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|mycounter|par_out[5]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|mycounter|par_out[5]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|mycounter|par_out[6]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|mycounter|par_out[6]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|mycounter|par_out[7]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|mycounter|par_out[7]|clk                                                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|myshiftreg|content[0]|clk                                                                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; my_shifter|myshiftreg|content[0]|clk                                                                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; my_shifter|myshiftreg|content[1]|clk                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; d[*]      ; clock      ; 2.163  ; 2.163  ; Rise       ; clock           ;
+;  d[0]     ; clock      ; 2.023  ; 2.023  ; Rise       ; clock           ;
+;  d[1]     ; clock      ; 2.061  ; 2.061  ; Rise       ; clock           ;
+;  d[2]     ; clock      ; 2.067  ; 2.067  ; Rise       ; clock           ;
+;  d[3]     ; clock      ; -0.281 ; -0.281 ; Rise       ; clock           ;
+;  d[4]     ; clock      ; -0.293 ; -0.293 ; Rise       ; clock           ;
+;  d[5]     ; clock      ; 2.147  ; 2.147  ; Rise       ; clock           ;
+;  d[6]     ; clock      ; 2.163  ; 2.163  ; Rise       ; clock           ;
+;  d[7]     ; clock      ; 2.075  ; 2.075  ; Rise       ; clock           ;
+; start     ; clock      ; 2.472  ; 2.472  ; Rise       ; clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; d[*]      ; clock      ; 0.413  ; 0.413  ; Rise       ; clock           ;
+;  d[0]     ; clock      ; -1.903 ; -1.903 ; Rise       ; clock           ;
+;  d[1]     ; clock      ; -1.941 ; -1.941 ; Rise       ; clock           ;
+;  d[2]     ; clock      ; -1.947 ; -1.947 ; Rise       ; clock           ;
+;  d[3]     ; clock      ; 0.401  ; 0.401  ; Rise       ; clock           ;
+;  d[4]     ; clock      ; 0.413  ; 0.413  ; Rise       ; clock           ;
+;  d[5]     ; clock      ; -2.027 ; -2.027 ; Rise       ; clock           ;
+;  d[6]     ; clock      ; -2.043 ; -2.043 ; Rise       ; clock           ;
+;  d[7]     ; clock      ; -1.955 ; -1.955 ; Rise       ; clock           ;
+; start     ; clock      ; -2.044 ; -2.044 ; Rise       ; clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; ind_out[*]  ; clock      ; 5.709 ; 5.709 ; Rise       ; clock           ;
+;  ind_out[0] ; clock      ; 5.591 ; 5.591 ; Rise       ; clock           ;
+;  ind_out[1] ; clock      ; 5.597 ; 5.597 ; Rise       ; clock           ;
+;  ind_out[2] ; clock      ; 3.564 ; 3.564 ; Rise       ; clock           ;
+;  ind_out[3] ; clock      ; 5.709 ; 5.709 ; Rise       ; clock           ;
+;  ind_out[4] ; clock      ; 5.447 ; 5.447 ; Rise       ; clock           ;
+;  ind_out[5] ; clock      ; 5.586 ; 5.586 ; Rise       ; clock           ;
+;  ind_out[6] ; clock      ; 5.473 ; 5.473 ; Rise       ; clock           ;
+;  ind_out[7] ; clock      ; 3.566 ; 3.566 ; Rise       ; clock           ;
+; ready       ; clock      ; 3.527 ; 3.527 ; Rise       ; clock           ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; ind_out[*]  ; clock      ; 3.564 ; 3.564 ; Rise       ; clock           ;
+;  ind_out[0] ; clock      ; 5.591 ; 5.591 ; Rise       ; clock           ;
+;  ind_out[1] ; clock      ; 5.597 ; 5.597 ; Rise       ; clock           ;
+;  ind_out[2] ; clock      ; 3.564 ; 3.564 ; Rise       ; clock           ;
+;  ind_out[3] ; clock      ; 5.709 ; 5.709 ; Rise       ; clock           ;
+;  ind_out[4] ; clock      ; 5.447 ; 5.447 ; Rise       ; clock           ;
+;  ind_out[5] ; clock      ; 5.586 ; 5.586 ; Rise       ; clock           ;
+;  ind_out[6] ; clock      ; 5.473 ; 5.473 ; Rise       ; clock           ;
+;  ind_out[7] ; clock      ; 3.566 ; 3.566 ; Rise       ; clock           ;
+; ready       ; clock      ; 3.527 ; 3.527 ; Rise       ; clock           ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -2.196  ; 0.215 ; -0.595   ; 0.581   ; -2.277              ;
+;  clock           ; -2.196  ; 0.215 ; -0.595   ; 0.581   ; -2.277              ;
+; Design-wide TNS  ; -31.543 ; 0.0   ; -4.76    ; 0.0     ; -71.021             ;
+;  clock           ; -31.543 ; 0.000 ; -4.760   ; 0.000   ; -71.021             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; d[*]      ; clock      ; 4.786 ; 4.786 ; Rise       ; clock           ;
+;  d[0]     ; clock      ; 4.385 ; 4.385 ; Rise       ; clock           ;
+;  d[1]     ; clock      ; 4.581 ; 4.581 ; Rise       ; clock           ;
+;  d[2]     ; clock      ; 4.553 ; 4.553 ; Rise       ; clock           ;
+;  d[3]     ; clock      ; 0.289 ; 0.289 ; Rise       ; clock           ;
+;  d[4]     ; clock      ; 0.270 ; 0.270 ; Rise       ; clock           ;
+;  d[5]     ; clock      ; 4.764 ; 4.764 ; Rise       ; clock           ;
+;  d[6]     ; clock      ; 4.786 ; 4.786 ; Rise       ; clock           ;
+;  d[7]     ; clock      ; 4.423 ; 4.423 ; Rise       ; clock           ;
+; start     ; clock      ; 5.873 ; 5.873 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; d[*]      ; clock      ; 0.413  ; 0.413  ; Rise       ; clock           ;
+;  d[0]     ; clock      ; -1.903 ; -1.903 ; Rise       ; clock           ;
+;  d[1]     ; clock      ; -1.941 ; -1.941 ; Rise       ; clock           ;
+;  d[2]     ; clock      ; -1.947 ; -1.947 ; Rise       ; clock           ;
+;  d[3]     ; clock      ; 0.401  ; 0.401  ; Rise       ; clock           ;
+;  d[4]     ; clock      ; 0.413  ; 0.413  ; Rise       ; clock           ;
+;  d[5]     ; clock      ; -2.027 ; -2.027 ; Rise       ; clock           ;
+;  d[6]     ; clock      ; -2.043 ; -2.043 ; Rise       ; clock           ;
+;  d[7]     ; clock      ; -1.955 ; -1.955 ; Rise       ; clock           ;
+; start     ; clock      ; -2.044 ; -2.044 ; Rise       ; clock           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Clock to Output Times                                                     ;
++-------------+------------+--------+--------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-------------+------------+--------+--------+------------+-----------------+
+; ind_out[*]  ; clock      ; 11.856 ; 11.856 ; Rise       ; clock           ;
+;  ind_out[0] ; clock      ; 11.495 ; 11.495 ; Rise       ; clock           ;
+;  ind_out[1] ; clock      ; 11.496 ; 11.496 ; Rise       ; clock           ;
+;  ind_out[2] ; clock      ; 7.380  ; 7.380  ; Rise       ; clock           ;
+;  ind_out[3] ; clock      ; 11.856 ; 11.856 ; Rise       ; clock           ;
+;  ind_out[4] ; clock      ; 11.071 ; 11.071 ; Rise       ; clock           ;
+;  ind_out[5] ; clock      ; 11.463 ; 11.463 ; Rise       ; clock           ;
+;  ind_out[6] ; clock      ; 11.101 ; 11.101 ; Rise       ; clock           ;
+;  ind_out[7] ; clock      ; 7.384  ; 7.384  ; Rise       ; clock           ;
+; ready       ; clock      ; 7.587  ; 7.587  ; Rise       ; clock           ;
++-------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; ind_out[*]  ; clock      ; 3.564 ; 3.564 ; Rise       ; clock           ;
+;  ind_out[0] ; clock      ; 5.591 ; 5.591 ; Rise       ; clock           ;
+;  ind_out[1] ; clock      ; 5.597 ; 5.597 ; Rise       ; clock           ;
+;  ind_out[2] ; clock      ; 3.564 ; 3.564 ; Rise       ; clock           ;
+;  ind_out[3] ; clock      ; 5.709 ; 5.709 ; Rise       ; clock           ;
+;  ind_out[4] ; clock      ; 5.447 ; 5.447 ; Rise       ; clock           ;
+;  ind_out[5] ; clock      ; 5.586 ; 5.586 ; Rise       ; clock           ;
+;  ind_out[6] ; clock      ; 5.473 ; 5.473 ; Rise       ; clock           ;
+;  ind_out[7] ; clock      ; 3.566 ; 3.566 ; Rise       ; clock           ;
+; ready       ; clock      ; 3.527 ; 3.527 ; Rise       ; clock           ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 123      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 123      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Recovery Transfers                                                ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 8        ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Removal Transfers                                                 ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 8        ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 15    ; 15   ;
+; Unconstrained Output Ports      ; 9     ; 9    ;
+; Unconstrained Output Port Paths ; 51    ; 51   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Feb 23 01:57:46 2020
+Info: Command: quartus_sta qlab3 -c qlab3
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'qlab3.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clock clock
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.196
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.196       -31.543 clock 
+Info (332146): Worst-case hold slack is 0.499
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.499         0.000 clock 
+Info (332146): Worst-case recovery slack is -0.595
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.595        -4.760 clock 
+Info (332146): Worst-case removal slack is 1.329
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     1.329         0.000 clock 
+Info (332146): Worst-case minimum pulse width slack is -2.277
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.277       -71.021 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.051
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.051        -0.143 clock 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clock 
+Info (332146): Worst-case recovery slack is 0.299
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.299         0.000 clock 
+Info (332146): Worst-case removal slack is 0.581
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.581         0.000 clock 
+Info (332146): Worst-case minimum pulse width slack is -1.423
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.423       -46.148 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 396 megabytes
+    Info: Processing ended: Sun Feb 23 01:57:48 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
+
+

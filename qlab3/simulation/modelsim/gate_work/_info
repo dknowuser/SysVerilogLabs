@@ -1,0 +1,63 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:/study/Labs/Verify/qlab3/simulation/modelsim
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+Z1 !s110 1582412291
+VWmok>2H]TimWYQNQOIZSe0
+04 13 4 work qlab3_vlg_tst fast 0
+=1-0090f5d3e5f7-5e51b203-22d-192c
+o-quiet -auto_acc_if_foreign -work work -L cycloneii_ver -L gate_work -L work +acc
+n@_opt
+OL;O;10.2c;57
+vqlab3
+Ib^iaZMiZUOk89RBg<Q`9K1
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+Z3 dE:/study/Labs/Verify/qlab3/simulation/modelsim
+w1582412272
+8qlab3_fast.vo
+Fqlab3_fast.vo
+L0 31
+Z4 OL;L;10.2c;57
+r1
+31
+o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+R1
+!s100 MGDHg?8f7PYP]MchBRcmE0
+!s108 1582412291.174000
+!s107 qlab3_fast.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|qlab3_fast.vo|
+!s92 -vlog01compat -work work +incdir+. -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s85 0
+!i111 0
+vqlab3_vlg_tst
+DXx6 sv_std 3 std 0 22 `a<MJET1=lN@jzbA7kHm;1
+R1
+I;K6lk=C5WCFfF0gb>i1nh2
+R2
+S1
+R3
+w1582411888
+8E:/study/Labs/Verify/qlab3/simulation/modelsim/qlab3.vt
+FE:/study/Labs/Verify/qlab3/simulation/modelsim/qlab3.vt
+L0 27
+R4
+r1
+31
+o-sv -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 cYmI?^BTWT_i]=NRmfNKO2
+!s105 qlab3_vt_unit
+!s85 0
+!s108 1582412291.277000
+!s107 E:/study/Labs/Verify/qlab3/simulation/modelsim/qlab3.vt|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/study/Labs/Verify/qlab3/simulation/modelsim|E:/study/Labs/Verify/qlab3/simulation/modelsim/qlab3.vt|
+!i111 0
+!s92 -sv -work work +incdir+E:/study/Labs/Verify/qlab3/simulation/modelsim -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

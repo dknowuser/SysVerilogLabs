@@ -1,0 +1,36 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.737 ns
+From           : qlab5_sys:comb_3|pio_0:the_pio_0|data_out
+To             : data_out
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 127.63 MHz ( period = 7.835 ns )
+From           : qlab5_sys:comb_3|cpu_0:the_cpu_0|E_src1[24]
+To             : qlab5_sys:comb_3|cpu_0:the_cpu_0|W_cmp_result
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

@@ -1,0 +1,66 @@
+Info: Starting: Create simulation model
+Info: ip-generate --project-directory=E:/study/Labs/Verify/qlab5/ --output-directory=E:/study/Labs/Verify/qlab5/qlab5/simulation/ --file-set=SIM_VERILOG --report-file=sopcinfo:E:/study/Labs/Verify/qlab5/qlab5.sopcinfo --report-file=html:E:/study/Labs/Verify/qlab5/qlab5.html --report-file=sip:E:/study/Labs/Verify/qlab5/qlab5/simulation/qlab5.sip --report-file=csv:E:/study/Labs/Verify/qlab5/qlab5.csv --report-file=spd:E:/study/Labs/Verify/qlab5/qlab5.spd --report-file=cmp:E:/study/Labs/Verify/qlab5/qlab5.cmp --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C5Q208C8 --system-info=DEVICE_SPEEDGRADE=8 --component-file=E:/study/Labs/Verify/qlab5/qlab5.qsys
+Progress: Loading qlab5/qlab5.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 12.1]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qlab5: Generating qlab5 "qlab5" for SIM_VERILOG
+Info: pipeline_bridge_swap_transform: After transform: 1 modules, 0 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: qlab5: Done qlab5" with 1 modules, 1 files, 231 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=E:/study/Labs/Verify/qlab5/qlab5.spd --output-directory=E:/study/Labs/Verify/qlab5/qlab5/simulation/
+Info: Doing: ip-make-simscript --spd=E:/study/Labs/Verify/qlab5/qlab5.spd --output-directory=E:/study/Labs/Verify/qlab5/qlab5/simulation/
+Info: Generating the following file(s) for MODELSIM simulator in E:/study/Labs/Verify/qlab5/qlab5/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in E:/study/Labs/Verify/qlab5/qlab5/simulation/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in E:/study/Labs/Verify/qlab5/qlab5/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in E:/study/Labs/Verify/qlab5/qlab5/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: Generating the following file(s) for RIVIERAPRO simulator in E:/study/Labs/Verify/qlab5/qlab5/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=E:/study/Labs/Verify/qlab5/ --output-directory=E:/study/Labs/Verify/qlab5/qlab5/ --report-file=bsf:E:/study/Labs/Verify/qlab5/qlab5.bsf --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C5Q208C8 --system-info=DEVICE_SPEEDGRADE=8 --component-file=E:/study/Labs/Verify/qlab5/qlab5.qsys
+Progress: Loading qlab5/qlab5.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 12.1]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=E:/study/Labs/Verify/qlab5/ --output-directory=E:/study/Labs/Verify/qlab5/qlab5/synthesis/ --file-set=QUARTUS_SYNTH --report-file=sopcinfo:E:/study/Labs/Verify/qlab5/qlab5.sopcinfo --report-file=html:E:/study/Labs/Verify/qlab5/qlab5.html --report-file=qip:E:/study/Labs/Verify/qlab5/qlab5/synthesis/qlab5.qip --report-file=cmp:E:/study/Labs/Verify/qlab5/qlab5.cmp --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C5Q208C8 --system-info=DEVICE_SPEEDGRADE=8 --component-file=E:/study/Labs/Verify/qlab5/qlab5.qsys
+Progress: Loading qlab5/qlab5.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 12.1]
+Progress: Parameterizing module clk_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qlab5: Generating qlab5 "qlab5" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 1 modules, 0 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: qlab5: Done qlab5" with 1 modules, 1 files, 231 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

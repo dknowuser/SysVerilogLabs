@@ -1,0 +1,20 @@
+/*
+ * source.cpp
+ *
+ *  Created on: 02.03.2020
+ *      Author: maro4_000
+ */
+#include "system.h"
+#include "altera_avalon_pio_regs.h"
+#include "alt_types.h"
+
+int main(void) __attribute__((weak, alias("alt_main")));
+int alt_main(void)
+{
+	// DECLARATION BLOCK
+	// Data to transmit
+	alt_u8 data;
+
+
+	return 0;
+}

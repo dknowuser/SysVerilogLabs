@@ -1,0 +1,31 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:/study/Labs/Verify/qlab59/simulation/modelsim
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+vqlab5
+!s110 1583537849
+!i10b 1
+!s100 :bfOTCPPV[InUfB[o]A=m1
+IG_aGXP>OINJWOG2>eTmU[1
+V`JN@9S9cnhjKRR_L]QIcM3
+Z1 dE:/study/Labs/Verify/qlab59/simulation/modelsim
+w1583537775
+8qlab5.vo
+Fqlab5.vo
+L0 31
+Z2 OL;L;10.2c;57
+r1
+!s85 0
+31
+!s108 1583537849.595000
+!s107 qlab5.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|qlab5.vo|
+!i111 0
+o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s92 -vlog01compat -work work +incdir+. -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF

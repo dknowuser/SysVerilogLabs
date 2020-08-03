@@ -1,0 +1,5 @@
+set tool_name "QuestaSim (Verilog)"
+set corner_file_list {
+	{{"Slow Model"} {qlab3.vo qlab3_v.sdo}}
+	{{"Fast Model"} {qlab3_fast.vo qlab3_v_fast.sdo}}
+}

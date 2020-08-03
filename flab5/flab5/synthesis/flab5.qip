@@ -1,0 +1,79 @@
+set_global_assignment -entity "flab5" -library "flab5" -name IP_TOOL_NAME "qsys"
+set_global_assignment -entity "flab5" -library "flab5" -name IP_TOOL_VERSION "12.1sp1"
+set_global_assignment -entity "flab5" -library "flab5" -name IP_TOOL_ENV "qsys"
+set_global_assignment -library "flab5" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../flab5.sopcinfo"]
+set_instance_assignment -entity "flab5" -library "flab5" -name SLD_INFO "QSYS_NAME flab5 HAS_SOPCINFO 1 GENERATION_ID 1583691946"
+set_global_assignment -library "flab5" -name MISC_FILE [file join $::quartus(qip_path) "../../flab5.cmp"]
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "flab5" -name MISC_FILE [file join $::quartus(qip_path) "../../flab5.qsys"]
+
+set_global_assignment -library "flab5" -name VERILOG_FILE [file join $::quartus(qip_path) "flab5.v"]
+set_global_assignment -library "flab5" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/flab5_irq_mapper.sv"]
+set_global_assignment -library "flab5" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/flab5_rsp_xbar_demux.sv"]
+set_global_assignment -library "flab5" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_arbitrator.sv"]
+set_global_assignment -library "flab5" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/flab5_cmd_xbar_mux.sv"]
+set_global_assignment -library "flab5" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/flab5_cmd_xbar_demux.sv"]
+set_global_assignment -library "flab5" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.v"]
+set_global_assignment -library "flab5" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_synchronizer.v"]
+set_global_assignment -library "flab5" -name SDC_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.sdc"]
+set_global_assignment -library "flab5" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/flab5_id_router.sv"]
+set_global_assignment -library "flab5" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/flab5_addr_router.sv"]
+set_global_assignment -library "flab5" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_avalon_sc_fifo.v"]
+set_global_assignment -library "flab5" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_slave_agent.sv"]
+set_global_assignment -library "flab5" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_burst_uncompressor.sv"]
+set_global_assignment -library "flab5" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_master_agent.sv"]
+set_global_assignment -library "flab5" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_slave_translator.sv"]
+set_global_assignment -library "flab5" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_master_translator.sv"]
+set_global_assignment -library "flab5" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/flab5_pio_0.v"]
+set_global_assignment -library "flab5" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/flab5_nios2_qsys_0.v"]
+set_global_assignment -library "flab5" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/flab5_nios2_qsys_0_rf_ram_a.mif"]
+set_global_assignment -library "flab5" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/flab5_nios2_qsys_0_rf_ram_b.mif"]
+set_global_assignment -library "flab5" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/flab5_nios2_qsys_0_test_bench.v"]
+set_global_assignment -library "flab5" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/flab5_onchip_memory2_0.hex"]
+set_global_assignment -library "flab5" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/flab5_onchip_memory2_0.v"]
+
+set_global_assignment -entity "flab5_irq_mapper" -library "flab5" -name IP_TOOL_NAME "altera_irq_mapper"
+set_global_assignment -entity "flab5_irq_mapper" -library "flab5" -name IP_TOOL_VERSION "12.1"
+set_global_assignment -entity "flab5_irq_mapper" -library "flab5" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "flab5_rsp_xbar_demux" -library "flab5" -name IP_TOOL_NAME "altera_merlin_demultiplexer"
+set_global_assignment -entity "flab5_rsp_xbar_demux" -library "flab5" -name IP_TOOL_VERSION "12.1"
+set_global_assignment -entity "flab5_rsp_xbar_demux" -library "flab5" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "flab5_cmd_xbar_mux" -library "flab5" -name IP_TOOL_NAME "altera_merlin_multiplexer"
+set_global_assignment -entity "flab5_cmd_xbar_mux" -library "flab5" -name IP_TOOL_VERSION "12.1"
+set_global_assignment -entity "flab5_cmd_xbar_mux" -library "flab5" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "flab5_cmd_xbar_demux" -library "flab5" -name IP_TOOL_NAME "altera_merlin_demultiplexer"
+set_global_assignment -entity "flab5_cmd_xbar_demux" -library "flab5" -name IP_TOOL_VERSION "12.1"
+set_global_assignment -entity "flab5_cmd_xbar_demux" -library "flab5" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "altera_reset_controller" -library "flab5" -name IP_TOOL_NAME "altera_reset_controller"
+set_global_assignment -entity "altera_reset_controller" -library "flab5" -name IP_TOOL_VERSION "12.1"
+set_global_assignment -entity "altera_reset_controller" -library "flab5" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "flab5_id_router" -library "flab5" -name IP_TOOL_NAME "altera_merlin_router"
+set_global_assignment -entity "flab5_id_router" -library "flab5" -name IP_TOOL_VERSION "12.1"
+set_global_assignment -entity "flab5_id_router" -library "flab5" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "flab5_addr_router" -library "flab5" -name IP_TOOL_NAME "altera_merlin_router"
+set_global_assignment -entity "flab5_addr_router" -library "flab5" -name IP_TOOL_VERSION "12.1"
+set_global_assignment -entity "flab5_addr_router" -library "flab5" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "altera_avalon_sc_fifo" -library "flab5" -name IP_TOOL_NAME "altera_avalon_sc_fifo"
+set_global_assignment -entity "altera_avalon_sc_fifo" -library "flab5" -name IP_TOOL_VERSION "12.1"
+set_global_assignment -entity "altera_avalon_sc_fifo" -library "flab5" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "altera_merlin_slave_agent" -library "flab5" -name IP_TOOL_NAME "altera_merlin_slave_agent"
+set_global_assignment -entity "altera_merlin_slave_agent" -library "flab5" -name IP_TOOL_VERSION "12.1"
+set_global_assignment -entity "altera_merlin_slave_agent" -library "flab5" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "altera_merlin_master_agent" -library "flab5" -name IP_TOOL_NAME "altera_merlin_master_agent"
+set_global_assignment -entity "altera_merlin_master_agent" -library "flab5" -name IP_TOOL_VERSION "12.1"
+set_global_assignment -entity "altera_merlin_master_agent" -library "flab5" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "altera_merlin_slave_translator" -library "flab5" -name IP_TOOL_NAME "altera_merlin_slave_translator"
+set_global_assignment -entity "altera_merlin_slave_translator" -library "flab5" -name IP_TOOL_VERSION "12.1"
+set_global_assignment -entity "altera_merlin_slave_translator" -library "flab5" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "altera_merlin_master_translator" -library "flab5" -name IP_TOOL_NAME "altera_merlin_master_translator"
+set_global_assignment -entity "altera_merlin_master_translator" -library "flab5" -name IP_TOOL_VERSION "12.1"
+set_global_assignment -entity "altera_merlin_master_translator" -library "flab5" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "flab5_pio_0" -library "flab5" -name IP_TOOL_NAME "altera_avalon_pio"
+set_global_assignment -entity "flab5_pio_0" -library "flab5" -name IP_TOOL_VERSION "12.1"
+set_global_assignment -entity "flab5_pio_0" -library "flab5" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "flab5_nios2_qsys_0" -library "flab5" -name IP_TOOL_NAME "altera_nios2_qsys"
+set_global_assignment -entity "flab5_nios2_qsys_0" -library "flab5" -name IP_TOOL_VERSION "12.1"
+set_global_assignment -entity "flab5_nios2_qsys_0" -library "flab5" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "flab5_onchip_memory2_0" -library "flab5" -name IP_TOOL_NAME "altera_avalon_onchip_memory2"
+set_global_assignment -entity "flab5_onchip_memory2_0" -library "flab5" -name IP_TOOL_VERSION "12.1"
+set_global_assignment -entity "flab5_onchip_memory2_0" -library "flab5" -name IP_TOOL_ENV "qsys"

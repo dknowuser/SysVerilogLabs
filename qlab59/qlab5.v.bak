@@ -1,0 +1,6 @@
+module qlab5(input wire clk, input wire reset_n,
+	output wire data_out);
+
+
+
+endmodule

@@ -1,0 +1,47 @@
+m255
+K3
+z0
+13
+cModel Technology
+dD:\Programs\altera\13.0sp1
+vst_m
+DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 cEdbc166T_T^GU:Cea=8:2
+IkF:5EBaaD6oXCm59JXHFk2
+!s105 st_m_sv_unit
+S1
+Z1 dD:/verilog/lab2
+w1582584033
+8D:/verilog/lab2/st_m.sv
+FD:/verilog/lab2/st_m.sv
+L0 1
+Z2 OL;L;10.4c;61
+Z3 !s108 1582584036.000000
+!s107 D:/verilog/lab2/st_m.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/verilog/lab2/st_m.sv|
+!i113 0
+o-work work -sv
+vtest_st_m
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 2C;e11z[P<gG=^A:>6B3Z0
+I0`YaGVBFijJ3IZTX]H8Ik3
+R1
+w1582576460
+8D:/verilog/lab2/test_st_m.v
+FD:/verilog/lab2/test_st_m.v
+L0 1
+R2
+R3
+!s107 D:/verilog/lab2/test_st_m.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/verilog/lab2/test_st_m.v|
+!i113 0
+o-work work

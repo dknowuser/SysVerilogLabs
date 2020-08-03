@@ -1,0 +1,8 @@
+	component qlab5_sys is
+		port (
+			clk_0                   : in  std_logic := 'X'; -- clk
+			reset_n                 : in  std_logic := 'X'; -- reset_n
+			out_port_from_the_pio_0 : out std_logic         -- export
+		);
+	end component qlab5_sys;
+

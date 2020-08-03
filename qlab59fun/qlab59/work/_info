@@ -1,0 +1,159 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\stud\5309\qlab59\qlab59
+vcpu_0
+!s100 IB0[BJ=9QK?0ZoCK>9L9j0
+IRfXjFP3_>X6fdem9VMhPM3
+V?Pgge6Ik:3YUMM332laQa3
+Z1 w1583532609
+Z2 8cpu_0.v
+Z3 Fcpu_0.v
+L0 107
+Z4 OE;L;6.5c;42
+r1
+!s85 0
+31
+Z5 !s102 -nocovercells
+Z6 o-work work -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
+vcpu_0_data_master_arbitrator
+!s100 ZFkfO]9cGIo[A@hEh=ILA3
+IV[]hKhLWJLRfo>3JmE^Qm0
+VA]?FWPQ6P<HGz7J1ZhHgj2
+Z7 w1583532610
+Z8 8D:/stud/5309/qlab59/qlab59/qlab5_sys.v
+Z9 FD:/stud/5309/qlab59/qlab59/qlab5_sys.v
+L0 26
+R4
+r1
+!s85 0
+31
+R5
+R6
+vcpu_0_instruction_master_arbitrator
+!s100 FK`DF6bRhSDYHgf2HLI2e0
+IRbF@a>_AddDnZb3b<V?UR0
+V@b?OH10nYdhQCP:_YiNcR2
+R7
+R8
+R9
+L0 119
+R4
+r1
+!s85 0
+31
+R5
+R6
+vcpu_0_rf_module
+!s100 Xgk0ackJa>zejo=Jf`TYo0
+I<`CCWKF4ol49Ca_?zCkV31
+VM9C5jOI7LGJ<IXS@Q_mHz1
+R1
+R2
+R3
+L0 21
+R4
+r1
+!s85 0
+31
+R5
+R6
+vonchip_memory2_0
+!s100 DhM5PXaOUnD5_N2V7?`nT3
+IlRGQ;WmA11kj0zjh_hDf?2
+Vn>RR;LH>]oXoC5k?_4@EV2
+R1
+8onchip_memory2_0.v
+Fonchip_memory2_0.v
+L0 21
+R4
+r1
+!s85 0
+31
+R5
+R6
+vonchip_memory2_0_s1_arbitrator
+!s100 @DF3A;1LdZK2cg2PNfXHd2
+I`H;iX:>o[6PJS17@CKcdO1
+Vf>GK=obNjlNL4C@elESh@2
+R7
+R8
+R9
+L0 245
+R4
+r1
+!s85 0
+31
+R5
+R6
+vpio_0
+!s100 JG4FSLT?=z2BN:d2;WoRz0
+I<7g>S_7QT_oPR;0L07R1@3
+Vi;7nW=:B:ZZ6Sm>6gIeOm3
+R1
+8pio_0.v
+Fpio_0.v
+L0 21
+R4
+r1
+!s85 0
+31
+R5
+R6
+vpio_0_s1_arbitrator
+!s100 hTIE3YocKF7n36_On2eN]2
+In;4aZ1C;Zka_zQ?B8jIN52
+V6DlO4_50`mYjE_ZeRzE<C2
+R7
+R8
+R9
+L0 705
+R4
+r1
+!s85 0
+31
+R5
+R6
+vqlab5_sys
+!s100 0:lRVLbGiRi^<kca9VTi]3
+Iocmz[a1?F@2fHmjJ`:iEn2
+VJ_E@AmY:zGD_zZ6faB7EC0
+R7
+R8
+R9
+L0 1018
+R4
+r1
+!s85 0
+31
+R5
+R6
+vqlab5_sys_reset_clk_0_domain_synch_module
+!s100 ZIe1eaFGGh[Y9KEV8gCYR1
+IJ5:<_H;=3?RKjDB_[:fQ43
+V@`H8aQk^JAiBDgT5YRRGd1
+R7
+R8
+R9
+L0 973
+R4
+r1
+!s85 0
+31
+R5
+R6
+vtest_bench
+!s100 iAiaSl:TQVH@<8>n]Z50i1
+I:L475G?dXQ@Ob5fERAZAA2
+VEJNK5ZO7TWUP1egUA9^TR1
+w0
+R8
+R9
+L1 1267
+R4
+r1
+!s85 0
+31
+R5
+R6

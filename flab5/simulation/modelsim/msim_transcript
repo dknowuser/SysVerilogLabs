@@ -1,0 +1,321 @@
+# Reading C:/questasim64_10.2c/tcl/vsim/pref.tcl 
+# //  Questa Sim-64
+# //  Version 10.2c Unknown Platform Jul 19 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do flab5_run_msim_gate_verilog.do 
+# if ![file isdirectory verilog_libs] {
+# 	file mkdir verilog_libs
+# }
+# 
+# vlib verilog_libs/cycloneii_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/cycloneii_ver".
+# 
+# vmap cycloneii_ver ./verilog_libs/cycloneii_ver
+# Copying C:/questasim64_10.2c/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/questasim64_10.2c/win64/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# vlog -vlog01compat -work cycloneii_ver {c:/altera/12.1sp1/quartus/eda/sim_lib/cycloneii_atoms.v}
+# QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling UDP CYCLONEII_PRIM_DFFE
+# -- Compiling UDP CYCLONEII_PRIM_DFFEAS
+# -- Compiling UDP CYCLONEII_PRIM_DFFEAS_HIGH
+# -- Compiling module cycloneii_dffe
+# -- Compiling module cycloneii_mux21
+# -- Compiling module cycloneii_mux41
+# -- Compiling module cycloneii_and1
+# -- Compiling module cycloneii_and16
+# -- Compiling module cycloneii_bmux21
+# -- Compiling module cycloneii_b17mux21
+# -- Compiling module cycloneii_nmux21
+# -- Compiling module cycloneii_b5mux21
+# -- Compiling module cycloneii_ram_pulse_generator
+# -- Compiling module cycloneii_ram_register
+# -- Compiling module cycloneii_ram_block
+# -- Compiling module cycloneii_jtag
+# -- Compiling module cycloneii_crcblock
+# -- Compiling module cycloneii_asmiblock
+# -- Compiling module cycloneii_m_cntr
+# -- Compiling module cycloneii_n_cntr
+# -- Compiling module cycloneii_scale_cntr
+# -- Compiling module cycloneii_pll_reg
+# -- Compiling module cycloneii_pll
+# -- Compiling module cycloneii_routing_wire
+# -- Compiling module cycloneii_lcell_ff
+# -- Compiling module cycloneii_lcell_comb
+# -- Compiling module cycloneii_asynch_io
+# -- Compiling module cycloneii_io
+# -- Compiling module cycloneii_clk_delay_ctrl
+# -- Compiling module cycloneii_clk_delay_cal_ctrl
+# -- Compiling module cycloneii_ena_reg
+# -- Compiling module cycloneii_clkctrl
+# -- Compiling module cycloneii_mac_data_reg
+# -- Compiling module cycloneii_mac_sign_reg
+# -- Compiling module cycloneii_mac_mult_internal
+# -- Compiling module cycloneii_mac_mult
+# -- Compiling module cycloneii_mac_out
+# 
+# Top level modules:
+# 	cycloneii_and1
+# 	cycloneii_and16
+# 	cycloneii_bmux21
+# 	cycloneii_b17mux21
+# 	cycloneii_nmux21
+# 	cycloneii_b5mux21
+# 	cycloneii_ram_block
+# 	cycloneii_jtag
+# 	cycloneii_crcblock
+# 	cycloneii_asmiblock
+# 	cycloneii_pll
+# 	cycloneii_routing_wire
+# 	cycloneii_lcell_ff
+# 	cycloneii_lcell_comb
+# 	cycloneii_io
+# 	cycloneii_clk_delay_ctrl
+# 	cycloneii_clk_delay_cal_ctrl
+# 	cycloneii_clkctrl
+# 	cycloneii_mac_mult
+# 	cycloneii_mac_out
+# 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+. {flab5.vo}
+# QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling module flab5
+# 
+# Top level modules:
+# 	flab5
+# 
+# Load canceled
+wave create -pattern none -portmode output -language vlog -range 7 0 /flab5/out_data_export
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# flab5
+wave create -pattern none -portmode input -language vlog /flab5/reset_reset_n
+# flab5
+wave create -pattern none -portmode input -language vlog /flab5/clk_clk
+# flab5
+vsim -novopt work.flab5
+# vsim -novopt work.flab5 
+# Refreshing E:/study/Labs/Verify/flab5/simulation/modelsim/gate_work.flab5
+# Loading work.flab5
+# ** Error: (vsim-3033) flab5.vo(88): Instantiation of 'cycloneii_io' failed. The design unit was not found.
+# 
+#         Region: /flab5
+#         Searched libraries:
+#             E:/study/Labs/Verify/flab5/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) flab5.vo(124): Instantiation of 'cycloneii_io' failed. The design unit was not found.
+# 
+#         Region: /flab5
+#         Searched libraries:
+#             E:/study/Labs/Verify/flab5/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) flab5.vo(160): Instantiation of 'cycloneii_io' failed. The design unit was not found.
+# 
+#         Region: /flab5
+#         Searched libraries:
+#             E:/study/Labs/Verify/flab5/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) flab5.vo(196): Instantiation of 'cycloneii_io' failed. The design unit was not found.
+# 
+#         Region: /flab5
+#         Searched libraries:
+#             E:/study/Labs/Verify/flab5/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) flab5.vo(232): Instantiation of 'cycloneii_io' failed. The design unit was not found.
+# 
+#         Region: /flab5
+#         Searched libraries:
+#             E:/study/Labs/Verify/flab5/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) flab5.vo(268): Instantiation of 'cycloneii_io' failed. The design unit was not found.
+# 
+#         Region: /flab5
+#         Searched libraries:
+#             E:/study/Labs/Verify/flab5/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) flab5.vo(304): Instantiation of 'cycloneii_io' failed. The design unit was not found.
+# 
+#         Region: /flab5
+#         Searched libraries:
+#             E:/study/Labs/Verify/flab5/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) flab5.vo(340): Instantiation of 'cycloneii_io' failed. The design unit was not found.
+# 
+#         Region: /flab5
+#         Searched libraries:
+#             E:/study/Labs/Verify/flab5/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) flab5.vo(376): Instantiation of 'cycloneii_io' failed. The design unit was not found.
+# 
+#         Region: /flab5
+#         Searched libraries:
+#             E:/study/Labs/Verify/flab5/simulation/modelsim/gate_work
+# ** Error: (vsim-3033) flab5.vo(412): Instantiation of 'cycloneii_io' failed. The design unit was not found.
+# 
+#         Region: /flab5
+#         Searched libraries:
+#             E:/study/Labs/Verify/flab5/simulation/modelsim/gate_work
+# Error loading design
+vsim -L cycloneii_ver -novopt work.flab5
+# vsim -L cycloneii_ver -novopt work.flab5 
+# Loading work.flab5
+# Refreshing E:/study/Labs/Verify/flab5/simulation/modelsim/verilog_libs/cycloneii_ver.cycloneii_io
+# Loading cycloneii_ver.cycloneii_io
+# Refreshing E:/study/Labs/Verify/flab5/simulation/modelsim/verilog_libs/cycloneii_ver.cycloneii_mux21
+# Loading cycloneii_ver.cycloneii_mux21
+# Refreshing E:/study/Labs/Verify/flab5/simulation/modelsim/verilog_libs/cycloneii_ver.cycloneii_dffe
+# Loading cycloneii_ver.cycloneii_dffe
+# Refreshing E:/study/Labs/Verify/flab5/simulation/modelsim/verilog_libs/cycloneii_ver.cycloneii_asynch_io
+# Loading cycloneii_ver.cycloneii_asynch_io
+# Loading instances from flab5_v.sdo
+# Refreshing E:/study/Labs/Verify/flab5/simulation/modelsim/verilog_libs/cycloneii_ver.CYCLONEII_PRIM_DFFE
+# Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
+# Loading timing data from flab5_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /flab5 File: flab5.vo
+# Can't move the Now cursor.
+force -freeze Edit:/flab5/clk_clk 0 0, 1 {50000 ps} -r {100 ns}
+# ** Error: (vsim-3561) No objects found matching 'Edit'.
+# ** Error: (vsim-4008) Object 'Edit:/flab5/clk_clk' not found.
+# 
+force -freeze Edit:/flab5/reset_reset_n 1 0
+# ** Error: (vsim-3561) No objects found matching 'Edit'.
+# ** Error: (vsim-4008) Object 'Edit:/flab5/reset_reset_n' not found.
+# 
+add wave -position end  sim:/flab5/out_data_export
+add wave -position end  sim:/flab5/reset_reset_n
+add wave -position end  sim:/flab5/clk_clk
+force -freeze sim:/flab5/clk_clk 0 0, 1 {50000 ps} -r {100 ns}
+force -freeze sim:/flab5/reset_reset_n 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run

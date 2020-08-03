@@ -1,0 +1,41 @@
+E:/study/Labs/Verify/lab3/control.sv {1 {vlog -work work -vopt -sv E:/study/Labs/Verify/lab3/control.sv
+QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module control_unit
+
+Top level modules:
+	control_unit
+
+} {} {}} E:/study/Labs/Verify/lab3/struct_l6.sv {1 {vlog -work work -vopt -sv E:/study/Labs/Verify/lab3/struct_l6.sv
+QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module sh_reg
+-- Compiling module shifter
+
+Top level modules:
+	shifter
+
+} {} {}} E:/study/Labs/Verify/lab3/top.sv {1 {vlog -work work -vopt -sv E:/study/Labs/Verify/lab3/top.sv
+QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module test
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}} E:/study/Labs/Verify/lab3/components.v {1 {vlog -work work -vopt E:/study/Labs/Verify/lab3/components.v
+QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module counter
+-- Compiling module shift_register
+-- Compiling module acc_sm
+-- Compiling module latch
+-- Compiling module decod
+-- Compiling module mux
+
+Top level modules:
+	counter
+	shift_register
+	acc_sm
+	latch
+	decod
+	mux
+
+} {} {}}

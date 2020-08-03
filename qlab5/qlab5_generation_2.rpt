@@ -1,0 +1,160 @@
+Info: Starting: Create simulation model
+Info: ip-generate --project-directory=E:/study/Labs/Verify/qlab5/ --output-directory=E:/study/Labs/Verify/qlab5/qlab5/simulation/ --file-set=SIM_VERILOG --report-file=sopcinfo:E:/study/Labs/Verify/qlab5/qlab5.sopcinfo --report-file=html:E:/study/Labs/Verify/qlab5/qlab5.html --report-file=sip:E:/study/Labs/Verify/qlab5/qlab5/simulation/qlab5.sip --report-file=csv:E:/study/Labs/Verify/qlab5/qlab5.csv --report-file=spd:E:/study/Labs/Verify/qlab5/qlab5.spd --report-file=cmp:E:/study/Labs/Verify/qlab5/qlab5.cmp --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C5Q208C8 --system-info=DEVICE_SPEEDGRADE=8 --component-file=E:/study/Labs/Verify/qlab5/qlab5.qsys
+Progress: Loading qlab5/qlab5.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 12.1]
+Progress: Parameterizing module clk_0
+Progress: Adding nios2_qsys_0 [altera_nios2_qsys 12.1]
+Progress: Parameterizing module nios2_qsys_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 12.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qlab5.onchip_memory2_0: Memory will be initialized from onchip_memory2_0.hex
+Warning: qlab5.nios2_qsys_0: nios2_qsys_0.data_master must be connected to an Avalon-MM slave
+Info: qlab5: Generating qlab5 "qlab5" for SIM_VERILOG
+Info: pipeline_bridge_swap_transform: After transform: 3 modules, 6 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_translator_transform: After transform: 6 modules, 15 connections
+Info: merlin_domain_transform: After transform: 12 modules, 44 connections
+Info: merlin_router_transform: After transform: 15 modules, 53 connections
+Info: merlin_network_to_switch_transform: After transform: 20 modules, 63 connections
+Info: merlin_interrupt_mapper_transform: After transform: 21 modules, 66 connections
+Info: nios2_qsys_0: Starting RTL generation for module 'qlab5_nios2_qsys_0'
+Info: nios2_qsys_0:   Generation command is [exec C:/altera/12.1sp1/quartus/../ip/altera/nios2_ip/altera_nios2/eperl.exe -I C:/altera/12.1sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/12.1sp1/quartus/sopc_builder/bin/europa -I C:/altera/12.1sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/12.1sp1/quartus/sopc_builder/bin -I C:/altera/12.1sp1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I C:/altera/12.1sp1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I C:/altera/12.1sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -I C:/altera/12.1sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -- C:/altera/12.1sp1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=qlab5_nios2_qsys_0 --dir=C:/Users/MARO4_~1/AppData/Local/Temp/alt8321_4810656303278508058.dir/0033_nios2_qsys_0_gen/ --quartus_dir=C:/altera/12.1sp1/quartus --verilog --config=C:/Users/MARO4_~1/AppData/Local/Temp/alt8321_4810656303278508058.dir/0033_nios2_qsys_0_gen//qlab5_nios2_qsys_0_processor_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/MARO4_~1/AppData/Local/Temp/alt8321_4810656303278508058.dir/0033_nios2_qsys_0_gen/    --bogus  ]
+Info: nios2_qsys_0: # 2020.02.29 18:16:04 (*) Starting Nios II generation
+Info: nios2_qsys_0: # 2020.02.29 18:16:04 (*)   Checking for plaintext license.
+Info: nios2_qsys_0: # 2020.02.29 18:16:04 (*)   Couldn't query license setup in Quartus directory C:/altera/12.1sp1/quartus
+Info: nios2_qsys_0: # 2020.02.29 18:16:04 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: nios2_qsys_0: # 2020.02.29 18:16:05 (*)   Plaintext license not found.
+Info: nios2_qsys_0: # 2020.02.29 18:16:05 (*)   No license required to generate encrypted Nios II/e.
+Info: nios2_qsys_0: # 2020.02.29 18:16:05 (*)   Elaborating CPU configuration settings
+Info: nios2_qsys_0: 
+Info: nios2_qsys_0: ERROR:
+Info: nios2_qsys_0: num2sz: Called with negative num of -4294967294
+Error: nios2_qsys_0: Failed to generate module qlab5_nios2_qsys_0
+Info: nios2_qsys_0: Done RTL generation for module 'qlab5_nios2_qsys_0'
+Error: nios2_qsys_0: can't read "plainTEXTfound": no such variable
+    while executing
+"return $plainTEXTfound"
+    (procedure "sub_generate_create_processor_rtl" line 112)
+    invoked from within
+"sub_generate_create_processor_rtl           "$output_name" "$output_directory" "$rtl_ext" "$simgen""
+    invoked from within
+"set plainTEXTfound [sub_generate_create_processor_rtl           "$output_name" "$output_directory" "$rtl_ext" "$simgen"]"
+    (procedure "generate" line 3)
+    invoked from within
+"generate                "$NAME" "$output_directory" "$rtl_ext" "$simgen""
+    invoked from within
+"set plainTEXTfound [generate                "$NAME" "$output_directory" "$rtl_ext" "$simgen"]"
+    (procedure "generate_with_plaintext" line 5)
+    invoked from within
+"generate_with_plaintext "$NAME" "$rtl_ext" "$simgen""
+    (procedure "sub_sim_verilog" line 5)
+    invoked from within
+"sub_sim_verilog qlab5_nios2_qsys_0"
+Info: nios2_qsys_0: "qlab5" instantiated altera_nios2_qsys "nios2_qsys_0"
+Error: Generation stopped, 17 or more modules remaining
+Info: qlab5: Done qlab5" with 14 modules, 1 files, 94628 bytes
+Error: ip-generate failed with exit code 1: 3 Errors, 1 Warning
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=E:/study/Labs/Verify/qlab5/qlab5.spd --output-directory=E:/study/Labs/Verify/qlab5/qlab5/simulation/
+Info: Doing: ip-make-simscript --spd=E:/study/Labs/Verify/qlab5/qlab5.spd --output-directory=E:/study/Labs/Verify/qlab5/qlab5/simulation/
+Info: Generating the following file(s) for MODELSIM simulator in E:/study/Labs/Verify/qlab5/qlab5/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in E:/study/Labs/Verify/qlab5/qlab5/simulation/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in E:/study/Labs/Verify/qlab5/qlab5/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in E:/study/Labs/Verify/qlab5/qlab5/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: Generating the following file(s) for RIVIERAPRO simulator in E:/study/Labs/Verify/qlab5/qlab5/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=E:/study/Labs/Verify/qlab5/ --output-directory=E:/study/Labs/Verify/qlab5/qlab5/ --report-file=bsf:E:/study/Labs/Verify/qlab5/qlab5.bsf --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C5Q208C8 --system-info=DEVICE_SPEEDGRADE=8 --component-file=E:/study/Labs/Verify/qlab5/qlab5.qsys
+Progress: Loading qlab5/qlab5.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 12.1]
+Progress: Parameterizing module clk_0
+Progress: Adding nios2_qsys_0 [altera_nios2_qsys 12.1]
+Progress: Parameterizing module nios2_qsys_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 12.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qlab5.onchip_memory2_0: Memory will be initialized from onchip_memory2_0.hex
+Warning: qlab5.nios2_qsys_0: nios2_qsys_0.data_master must be connected to an Avalon-MM slave
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=E:/study/Labs/Verify/qlab5/ --output-directory=E:/study/Labs/Verify/qlab5/qlab5/synthesis/ --file-set=QUARTUS_SYNTH --report-file=sopcinfo:E:/study/Labs/Verify/qlab5/qlab5.sopcinfo --report-file=html:E:/study/Labs/Verify/qlab5/qlab5.html --report-file=qip:E:/study/Labs/Verify/qlab5/qlab5/synthesis/qlab5.qip --report-file=cmp:E:/study/Labs/Verify/qlab5/qlab5.cmp --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C5Q208C8 --system-info=DEVICE_SPEEDGRADE=8 --component-file=E:/study/Labs/Verify/qlab5/qlab5.qsys
+Progress: Loading qlab5/qlab5.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 12.1]
+Progress: Parameterizing module clk_0
+Progress: Adding nios2_qsys_0 [altera_nios2_qsys 12.1]
+Progress: Parameterizing module nios2_qsys_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 12.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qlab5.onchip_memory2_0: Memory will be initialized from onchip_memory2_0.hex
+Warning: qlab5.nios2_qsys_0: nios2_qsys_0.data_master must be connected to an Avalon-MM slave
+Info: qlab5: Generating qlab5 "qlab5" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 3 modules, 6 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_translator_transform: After transform: 6 modules, 15 connections
+Info: merlin_domain_transform: After transform: 12 modules, 44 connections
+Info: merlin_router_transform: After transform: 15 modules, 53 connections
+Info: merlin_network_to_switch_transform: After transform: 20 modules, 63 connections
+Info: merlin_interrupt_mapper_transform: After transform: 21 modules, 66 connections
+Info: nios2_qsys_0: Starting RTL generation for module 'qlab5_nios2_qsys_0'
+Info: nios2_qsys_0:   Generation command is [exec C:/altera/12.1sp1/quartus/../ip/altera/nios2_ip/altera_nios2/eperl.exe -I C:/altera/12.1sp1/quartus/common/ip/altera/common/perl/5.8.3 -I C:/altera/12.1sp1/quartus/sopc_builder/bin/europa -I C:/altera/12.1sp1/quartus/sopc_builder/bin/perl_lib -I C:/altera/12.1sp1/quartus/sopc_builder/bin -I C:/altera/12.1sp1/quartus/../ip/altera/nios2_ip/altera_nios2/cpu_lib -I C:/altera/12.1sp1/quartus/../ip/altera/nios2_ip/altera_nios2/nios_lib -I C:/altera/12.1sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -I C:/altera/12.1sp1/quartus/../ip/altera/nios2_ip/altera_nios2 -- C:/altera/12.1sp1/quartus/../ip/altera/nios2_ip/altera_nios2/generate_rtl.epl --name=qlab5_nios2_qsys_0 --dir=C:/Users/MARO4_~1/AppData/Local/Temp/alt8321_4810656303278508058.dir/0039_nios2_qsys_0_gen/ --quartus_dir=C:/altera/12.1sp1/quartus --verilog --config=C:/Users/MARO4_~1/AppData/Local/Temp/alt8321_4810656303278508058.dir/0039_nios2_qsys_0_gen//qlab5_nios2_qsys_0_processor_configuration.pl  --do_build_sim=0    --bogus  ]
+Info: nios2_qsys_0: # 2020.02.29 18:16:09 (*) Starting Nios II generation
+Info: nios2_qsys_0: # 2020.02.29 18:16:09 (*)   Checking for plaintext license.
+Info: nios2_qsys_0: # 2020.02.29 18:16:09 (*)   Couldn't query license setup in Quartus directory C:/altera/12.1sp1/quartus
+Info: nios2_qsys_0: # 2020.02.29 18:16:09 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: nios2_qsys_0: # 2020.02.29 18:16:10 (*)   Plaintext license not found.
+Info: nios2_qsys_0: # 2020.02.29 18:16:10 (*)   No license required to generate encrypted Nios II/e.
+Info: nios2_qsys_0: # 2020.02.29 18:16:10 (*)   Elaborating CPU configuration settings
+Info: nios2_qsys_0: 
+Info: nios2_qsys_0: ERROR:
+Info: nios2_qsys_0: num2sz: Called with negative num of -4294967294
+Error: nios2_qsys_0: Failed to generate module qlab5_nios2_qsys_0
+Info: nios2_qsys_0: Done RTL generation for module 'qlab5_nios2_qsys_0'
+Error: nios2_qsys_0: can't read "plainTEXTfound": no such variable
+    while executing
+"return $plainTEXTfound"
+    (procedure "sub_generate_create_processor_rtl" line 112)
+    invoked from within
+"sub_generate_create_processor_rtl           "$output_name" "$output_directory" "$rtl_ext" "$simgen""
+    invoked from within
+"set plainTEXTfound [sub_generate_create_processor_rtl           "$output_name" "$output_directory" "$rtl_ext" "$simgen"]"
+    (procedure "generate" line 3)
+    invoked from within
+"generate                "$NAME" "$output_directory" "$rtl_ext" "$simgen""
+    invoked from within
+"set plainTEXTfound [generate                "$NAME" "$output_directory" "$rtl_ext" "$simgen"]"
+    (procedure "generate_with_plaintext" line 5)
+    invoked from within
+"generate_with_plaintext "$NAME" "$rtl_ext" "$simgen""
+    (procedure "sub_quartus_synth" line 6)
+    invoked from within
+"sub_quartus_synth qlab5_nios2_qsys_0"
+Info: nios2_qsys_0: "qlab5" instantiated altera_nios2_qsys "nios2_qsys_0"
+Error: Generation stopped, 17 or more modules remaining
+Info: qlab5: Done qlab5" with 14 modules, 1 files, 94628 bytes
+Error: ip-generate failed with exit code 1: 3 Errors, 1 Warning
+Info: Finished: Create HDL design files for synthesis

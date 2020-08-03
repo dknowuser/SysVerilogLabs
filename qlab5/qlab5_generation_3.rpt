@@ -1,0 +1,112 @@
+Info: Starting: Create simulation model
+Info: ip-generate --project-directory=E:/study/Labs/Verify/qlab5/ --output-directory=E:/study/Labs/Verify/qlab5/qlab5/simulation/ --file-set=SIM_VERILOG --report-file=sopcinfo:E:/study/Labs/Verify/qlab5/qlab5.sopcinfo --report-file=html:E:/study/Labs/Verify/qlab5/qlab5.html --report-file=sip:E:/study/Labs/Verify/qlab5/qlab5/simulation/qlab5.sip --report-file=csv:E:/study/Labs/Verify/qlab5/qlab5.csv --report-file=spd:E:/study/Labs/Verify/qlab5/qlab5.spd --report-file=cmp:E:/study/Labs/Verify/qlab5/qlab5.cmp --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C5Q208C8 --system-info=DEVICE_SPEEDGRADE=8 --component-file=E:/study/Labs/Verify/qlab5/qlab5.qsys
+Progress: Loading qlab5/qlab5.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 12.1]
+Progress: Parameterizing module clk_0
+Progress: Adding pio_0 [altera_avalon_pio 12.1]
+Progress: Parameterizing module pio_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: qlab5.pio_0: pio_0.s1 must be connected to an Avalon-MM master
+Info: qlab5: Generating qlab5 "qlab5" for SIM_VERILOG
+Info: pipeline_bridge_swap_transform: After transform: 2 modules, 2 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: reset_adaptation_transform: After transform: 3 modules, 4 connections
+Info: Starting classic module elaboration.
+      1 [main] sh 10252 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+Qt: Untested Windows version 6.2 detected!
+"c:/altera/12.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/12.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/12.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/12.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/12.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/12.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/MARO4_~1/AppData/Local/Temp/alt8321_4810656303278508058.dir/0040_sopclgen  --no_splash --refresh C:/Users/MARO4_~1/AppData/Local/Temp/alt8321_4810656303278508058.dir/0040_sopclgen/yysystem.v --quartus_dir="c:/altera/12.1sp1/quartus" --sopc_perl="c:/altera/12.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/12.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/12.1sp1/quartus/../ip/altera/nios2_ip"
+Info: Finished elaborating classic module.
+Executing: C:/altera/12.1sp1/quartus//sopc_builder/bin/sopc_builder --classic --generate C:/Users/MARO4_~1/AppData/Local/Temp/alt8321_4810656303278508058.dir/0040_sopclgen/yysystem.ptf
+Info: Running sopc_builder...
+      1 [main] sh 7888 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+Qt: Untested Windows version 6.2 detected!
+"c:/altera/12.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/12.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/12.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/12.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/12.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/12.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/MARO4_~1/AppData/Local/Temp/alt8321_4810656303278508058.dir/0040_sopclgen  --generate C:/Users/MARO4_~1/AppData/Local/Temp/alt8321_4810656303278508058.dir/0040_sopclgen/yysystem.v --quartus_dir="c:/altera/12.1sp1/quartus" --sopc_perl="c:/altera/12.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/12.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/12.1sp1/quartus/../ip/altera/nios2_ip"
+No .sopc_builder configuration file(!)
+.
+# 2020.02.29 18:17:28 (*) Success: sopc_builder finished.
+Info: pio_0: "qlab5" instantiated altera_avalon_pio "pio_0"
+Info: rst_controller: "qlab5" instantiated altera_reset_controller "rst_controller"
+Info: qlab5: Done qlab5" with 3 modules, 4 files, 11798 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=E:/study/Labs/Verify/qlab5/qlab5.spd --output-directory=E:/study/Labs/Verify/qlab5/qlab5/simulation/
+Info: Doing: ip-make-simscript --spd=E:/study/Labs/Verify/qlab5/qlab5.spd --output-directory=E:/study/Labs/Verify/qlab5/qlab5/simulation/
+Info: Generating the following file(s) for MODELSIM simulator in E:/study/Labs/Verify/qlab5/qlab5/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in E:/study/Labs/Verify/qlab5/qlab5/simulation/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in E:/study/Labs/Verify/qlab5/qlab5/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in E:/study/Labs/Verify/qlab5/qlab5/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	2 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERAPRO simulator in E:/study/Labs/Verify/qlab5/qlab5/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=E:/study/Labs/Verify/qlab5/ --output-directory=E:/study/Labs/Verify/qlab5/qlab5/ --report-file=bsf:E:/study/Labs/Verify/qlab5/qlab5.bsf --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C5Q208C8 --system-info=DEVICE_SPEEDGRADE=8 --component-file=E:/study/Labs/Verify/qlab5/qlab5.qsys
+Progress: Loading qlab5/qlab5.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 12.1]
+Progress: Parameterizing module clk_0
+Progress: Adding pio_0 [altera_avalon_pio 12.1]
+Progress: Parameterizing module pio_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: qlab5.pio_0: pio_0.s1 must be connected to an Avalon-MM master
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=E:/study/Labs/Verify/qlab5/ --output-directory=E:/study/Labs/Verify/qlab5/qlab5/synthesis/ --file-set=QUARTUS_SYNTH --report-file=sopcinfo:E:/study/Labs/Verify/qlab5/qlab5.sopcinfo --report-file=html:E:/study/Labs/Verify/qlab5/qlab5.html --report-file=qip:E:/study/Labs/Verify/qlab5/qlab5/synthesis/qlab5.qip --report-file=cmp:E:/study/Labs/Verify/qlab5/qlab5.cmp --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C5Q208C8 --system-info=DEVICE_SPEEDGRADE=8 --component-file=E:/study/Labs/Verify/qlab5/qlab5.qsys
+Progress: Loading qlab5/qlab5.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 12.1]
+Progress: Parameterizing module clk_0
+Progress: Adding pio_0 [altera_avalon_pio 12.1]
+Progress: Parameterizing module pio_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: qlab5.pio_0: pio_0.s1 must be connected to an Avalon-MM master
+Info: qlab5: Generating qlab5 "qlab5" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 2 modules, 2 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: reset_adaptation_transform: After transform: 3 modules, 4 connections
+Info: Starting classic module elaboration.
+      1 [main] sh 8992 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+Qt: Untested Windows version 6.2 detected!
+"c:/altera/12.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/12.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/12.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/12.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/12.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/12.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/MARO4_~1/AppData/Local/Temp/alt8321_4810656303278508058.dir/0046_sopclgen  --no_splash --refresh C:/Users/MARO4_~1/AppData/Local/Temp/alt8321_4810656303278508058.dir/0046_sopclgen/yysystem.v --quartus_dir="c:/altera/12.1sp1/quartus" --sopc_perl="c:/altera/12.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/12.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/12.1sp1/quartus/../ip/altera/nios2_ip"
+Info: Finished elaborating classic module.
+Executing: C:/altera/12.1sp1/quartus//sopc_builder/bin/sopc_builder --classic --generate C:/Users/MARO4_~1/AppData/Local/Temp/alt8321_4810656303278508058.dir/0046_sopclgen/yysystem.ptf
+Info: Running sopc_builder...
+      1 [main] sh 9620 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+Qt: Untested Windows version 6.2 detected!
+"c:/altera/12.1sp1/quartus/bin/jre/bin/java.exe" -Xmx512M -classpath "c:/altera/12.1sp1/quartus/sopc_builder/bin/sopc_builder.jar;c:/altera/12.1sp1/quartus/sopc_builder/bin/PinAssigner.jar;c:/altera/12.1sp1/quartus/sopc_builder/bin/sopc_wizard.jar;c:/altera/12.1sp1/quartus/sopc_builder/bin/jptf.jar" sopc_builder.sopc_builder  -d"c:/altera/12.1sp1/quartus/sopc_builder" -notalkback=1 -projectnameyysystem.qpf -projectpathC:/Users/MARO4_~1/AppData/Local/Temp/alt8321_4810656303278508058.dir/0046_sopclgen  --generate C:/Users/MARO4_~1/AppData/Local/Temp/alt8321_4810656303278508058.dir/0046_sopclgen/yysystem.v --quartus_dir="c:/altera/12.1sp1/quartus" --sopc_perl="c:/altera/12.1sp1/quartus/bin/perl" --sopc_lib_path="++c:/altera/12.1sp1/quartus/../ip/altera/sopc_builder_ip+c:/altera/12.1sp1/quartus/../ip/altera/nios2_ip"
+No .sopc_builder configuration file(!)
+.
+# 2020.02.29 18:17:37 (*) Success: sopc_builder finished.
+Info: pio_0: "qlab5" instantiated altera_avalon_pio "pio_0"
+Info: rst_controller: "qlab5" instantiated altera_reset_controller "rst_controller"
+Info: qlab5: Done qlab5" with 3 modules, 5 files, 13532 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

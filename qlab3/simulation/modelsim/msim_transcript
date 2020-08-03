@@ -1,0 +1,160 @@
+# Reading C:/questasim64_10.2c/tcl/vsim/pref.tcl 
+# //  Questa Sim-64
+# //  Version 10.2c Unknown Platform Jul 19 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do qlab3_run_msim_gate_verilog.do 
+# if ![file isdirectory verilog_libs] {
+# 	file mkdir verilog_libs
+# }
+# 
+# vlib verilog_libs/cycloneii_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/cycloneii_ver".
+# 
+# vmap cycloneii_ver ./verilog_libs/cycloneii_ver
+# Copying C:/questasim64_10.2c/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/questasim64_10.2c/win64/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# vlog -vlog01compat -work cycloneii_ver {c:/altera/12.1sp1/quartus/eda/sim_lib/cycloneii_atoms.v}
+# QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling UDP CYCLONEII_PRIM_DFFE
+# -- Compiling UDP CYCLONEII_PRIM_DFFEAS
+# -- Compiling UDP CYCLONEII_PRIM_DFFEAS_HIGH
+# -- Compiling module cycloneii_dffe
+# -- Compiling module cycloneii_mux21
+# -- Compiling module cycloneii_mux41
+# -- Compiling module cycloneii_and1
+# -- Compiling module cycloneii_and16
+# -- Compiling module cycloneii_bmux21
+# -- Compiling module cycloneii_b17mux21
+# -- Compiling module cycloneii_nmux21
+# -- Compiling module cycloneii_b5mux21
+# -- Compiling module cycloneii_ram_pulse_generator
+# -- Compiling module cycloneii_ram_register
+# -- Compiling module cycloneii_ram_block
+# -- Compiling module cycloneii_jtag
+# -- Compiling module cycloneii_crcblock
+# -- Compiling module cycloneii_asmiblock
+# -- Compiling module cycloneii_m_cntr
+# -- Compiling module cycloneii_n_cntr
+# -- Compiling module cycloneii_scale_cntr
+# -- Compiling module cycloneii_pll_reg
+# -- Compiling module cycloneii_pll
+# -- Compiling module cycloneii_routing_wire
+# -- Compiling module cycloneii_lcell_ff
+# -- Compiling module cycloneii_lcell_comb
+# -- Compiling module cycloneii_asynch_io
+# -- Compiling module cycloneii_io
+# -- Compiling module cycloneii_clk_delay_ctrl
+# -- Compiling module cycloneii_clk_delay_cal_ctrl
+# -- Compiling module cycloneii_ena_reg
+# -- Compiling module cycloneii_clkctrl
+# -- Compiling module cycloneii_mac_data_reg
+# -- Compiling module cycloneii_mac_sign_reg
+# -- Compiling module cycloneii_mac_mult_internal
+# -- Compiling module cycloneii_mac_mult
+# -- Compiling module cycloneii_mac_out
+# 
+# Top level modules:
+# 	cycloneii_and1
+# 	cycloneii_and16
+# 	cycloneii_bmux21
+# 	cycloneii_b17mux21
+# 	cycloneii_nmux21
+# 	cycloneii_b5mux21
+# 	cycloneii_ram_block
+# 	cycloneii_jtag
+# 	cycloneii_crcblock
+# 	cycloneii_asmiblock
+# 	cycloneii_pll
+# 	cycloneii_routing_wire
+# 	cycloneii_lcell_ff
+# 	cycloneii_lcell_comb
+# 	cycloneii_io
+# 	cycloneii_clk_delay_ctrl
+# 	cycloneii_clk_delay_cal_ctrl
+# 	cycloneii_clkctrl
+# 	cycloneii_mac_mult
+# 	cycloneii_mac_out
+# 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+. {qlab3_fast.vo}
+# QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling module qlab3
+# 
+# Top level modules:
+# 	qlab3
+# 
+# vlog -sv -work work +incdir+E:/study/Labs/Verify/qlab3/simulation/modelsim {E:/study/Labs/Verify/qlab3/simulation/modelsim/qlab3.vt}
+# QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling module qlab3_vlg_tst
+# 
+# Top level modules:
+# 	qlab3_vlg_tst
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L cycloneii_ver -L gate_work -L work -voptargs="+acc"  qlab3_vlg_tst
+# vsim +transport_int_delays +transport_path_delays -L cycloneii_ver -L gate_work -L work -voptargs=\"+acc\" -t 1ps qlab3_vlg_tst 
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# Loading sv_std.std
+# Loading work.qlab3_vlg_tst(fast)
+# Loading work.qlab3(fast)
+# Loading cycloneii_ver.cycloneii_lcell_ff(fast)
+# Loading cycloneii_ver.cycloneii_lcell_comb(fast)
+# Loading cycloneii_ver.cycloneii_lcell_comb(fast__1)
+# Loading cycloneii_ver.cycloneii_lcell_comb(fast__2)
+# Loading cycloneii_ver.cycloneii_io(fast)
+# Loading cycloneii_ver.cycloneii_mux21(fast)
+# Loading cycloneii_ver.cycloneii_dffe(fast)
+# Loading cycloneii_ver.cycloneii_asynch_io(fast)
+# Loading cycloneii_ver.cycloneii_clkctrl(fast)
+# Loading cycloneii_ver.cycloneii_mux41(fast)
+# Loading cycloneii_ver.cycloneii_ena_reg(fast)
+# Loading cycloneii_ver.cycloneii_lcell_comb(fast__3)
+# Loading cycloneii_ver.cycloneii_lcell_comb(fast__4)
+# Loading cycloneii_ver.cycloneii_lcell_comb(fast__5)
+# Loading cycloneii_ver.cycloneii_lcell_comb(fast__6)
+# Loading cycloneii_ver.cycloneii_lcell_comb(fast__7)
+# Loading cycloneii_ver.cycloneii_lcell_comb(fast__8)
+# Loading cycloneii_ver.cycloneii_lcell_comb(fast__9)
+# Loading cycloneii_ver.cycloneii_lcell_comb(fast__10)
+# Loading cycloneii_ver.cycloneii_lcell_comb(fast__11)
+# Loading cycloneii_ver.cycloneii_lcell_comb(fast__12)
+# Loading cycloneii_ver.cycloneii_lcell_comb(fast__13)
+# Loading cycloneii_ver.cycloneii_lcell_comb(fast__14)
+# Loading cycloneii_ver.cycloneii_lcell_comb(fast__15)
+# Loading cycloneii_ver.cycloneii_ram_block(fast)
+# Loading cycloneii_ver.cycloneii_ram_register(fast)
+# Loading cycloneii_ver.cycloneii_ram_register(fast__1)
+# Loading cycloneii_ver.cycloneii_ram_register(fast__2)
+# Loading cycloneii_ver.cycloneii_ram_register(fast__3)
+# Loading cycloneii_ver.cycloneii_ram_pulse_generator(fast)
+# Loading cycloneii_ver.cycloneii_lcell_comb(fast__16)
+# Loading cycloneii_ver.cycloneii_lcell_comb(fast__17)
+# Loading cycloneii_ver.cycloneii_io(fast__1)
+# Loading cycloneii_ver.cycloneii_asynch_io(fast__1)
+# Loading instances from qlab3_v_fast.sdo
+# Loading timing data from qlab3_v_fast.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /qlab3_vlg_tst File: E:/study/Labs/Verify/qlab3/simulation/modelsim/qlab3.vt
+# 
+# add wave *
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1024 us

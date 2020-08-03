@@ -1,0 +1,22 @@
+E:/study/Labs/Verify/lab1/components.v {1 {vlog -work work -vopt E:/study/Labs/Verify/lab1/components.v
+QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module decod
+
+Top level modules:
+	decod
+
+} {} {}} {E:/study/Labs/Verify/lab1/str_ l3.v} {1 {vlog -work work -vopt {E:/study/Labs/Verify/lab1/str_ l3.v}
+QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module complex
+
+Top level modules:
+	complex
+
+} {} {}} E:/study/Labs/Verify/lab1/tb_l3.v {1 {vlog -work work -vopt E:/study/Labs/Verify/lab1/tb_l3.v
+QuestaSim-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+-- Compiling module test
+
+Top level modules:
+	test
+
+} {} {}}
